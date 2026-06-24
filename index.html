@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sabahuddin Shams | Biomedical Operations & Healthcare Analytics Portfolio</title>
+  <meta name="description" content="Sabahuddin Shams portfolio: biomedical operations, healthcare analytics, PM tracking, medical device inventory, validation support, procurement, dashboards, and process improvement." />
+  <style>
+    :root{
+      --bg:#060816;
+      --bg2:#0b1020;
+      --card:rgba(15,23,42,.72);
+      --card2:rgba(30,41,59,.62);
+      --text:#eef6ff;
+      --muted:#a8b3c7;
+      --line:rgba(148,163,184,.22);
+      --cyan:#38bdf8;
+      --blue:#2563eb;
+      --green:#22c55e;
+      --violet:#a78bfa;
+      --amber:#fbbf24;
+      --rose:#fb7185;
+      --shadow:0 30px 90px rgba(0,0,0,.35);
+      --radius:26px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 10% 5%, rgba(56,189,248,.22), transparent 30rem),
+        radial-gradient(circle at 88% 8%, rgba(167,139,250,.20), transparent 28rem),
+        radial-gradient(circle at 50% 55%, rgba(34,197,94,.10), transparent 40rem),
+        linear-gradient(180deg,#060816 0%, #0b1020 52%, #050712 100%);
+      overflow-x:hidden;
+      line-height:1.65;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+      background-size:54px 54px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.68), transparent 72%);
+      z-index:-1;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1180px,92%);margin:0 auto}
+    .nav{
+      position:sticky;top:0;z-index:100;
+      backdrop-filter:blur(18px);
+      background:rgba(6,8,22,.78);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0;
+    }
+    .brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.2px}
+    .logo{
+      width:36px;height:36px;border-radius:12px;
+      background:linear-gradient(135deg,var(--cyan),var(--green));
+      box-shadow:0 0 28px rgba(56,189,248,.35);
+      display:grid;place-items:center;color:#03101a;font-weight:1000;
+    }
+    .nav-links{display:flex;gap:6px;flex-wrap:wrap}
+    .nav-links a{
+      color:var(--muted);
+      font-weight:750;
+      padding:8px 11px;
+      border-radius:999px;
+      font-size:14px;
+    }
+    .nav-links a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+    .hero{min-height:calc(100vh - 70px);display:grid;align-items:center;padding:74px 0 54px}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:34px;align-items:center}
+    .badge{
+      display:inline-flex;align-items:center;gap:9px;
+      padding:9px 13px;border-radius:999px;
+      color:#dff7ff;
+      background:rgba(56,189,248,.10);
+      border:1px solid rgba(56,189,248,.24);
+      font-weight:850;font-size:14px;
+      animation:fadeUp .7s ease both;
+    }
+    .pulse{
+      width:9px;height:9px;border-radius:50%;background:var(--green);
+      box-shadow:0 0 0 0 rgba(34,197,94,.8);
+      animation:pulse 1.8s infinite;
+    }
+    h1{
+      font-size:clamp(44px,7vw,86px);
+      line-height:.98;
+      letter-spacing:-3px;
+      margin:20px 0 22px;
+      animation:fadeUp .85s ease .07s both;
+    }
+    .grad{
+      background:linear-gradient(90deg,var(--cyan),var(--green),var(--violet));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .subtitle{
+      color:var(--muted);
+      font-size:clamp(18px,2.25vw,24px);
+      max-width:850px;
+      margin:0;
+      animation:fadeUp .85s ease .14s both;
+    }
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;animation:fadeUp .85s ease .22s both}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:13px 18px;border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      font-weight:900;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+      transition:.22s ease;
+    }
+    .btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.10)}
+    .btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));border-color:transparent}
+    .btn.green{background:linear-gradient(135deg,var(--green),#15803d);border-color:transparent}
+    .hero-card{
+      position:relative;
+      padding:24px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(15,23,42,.85),rgba(15,23,42,.52));
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+      animation:floatIn .95s ease .12s both;
+    }
+    .hero-card:before{
+      content:"";position:absolute;inset:-2px;
+      background:radial-gradient(circle at 18% 0%, rgba(56,189,248,.28), transparent 25rem);
+      pointer-events:none;
+    }
+    .dash-top{display:flex;align-items:center;justify-content:space-between;gap:15px;position:relative}
+    .dash-title{font-weight:950;font-size:18px}
+    .status{font-size:12px;color:#bbf7d0;background:rgba(34,197,94,.13);border:1px solid rgba(34,197,94,.28);padding:5px 9px;border-radius:999px;font-weight:850}
+    .kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:18px;position:relative}
+    .kpi{
+      padding:17px;border-radius:19px;
+      background:rgba(255,255,255,.055);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .kpi strong{display:block;font-size:30px;line-height:1;color:#fff;margin-bottom:8px}
+    .kpi span{color:var(--muted);font-size:13px}
+    .mini-chart{margin-top:18px;display:flex;align-items:end;gap:8px;height:122px;position:relative;padding:14px;background:rgba(0,0,0,.18);border-radius:18px;border:1px solid rgba(255,255,255,.07)}
+    .bar{flex:1;border-radius:999px 999px 6px 6px;background:linear-gradient(180deg,var(--cyan),var(--blue));min-height:18px;animation:grow 1.2s ease both}
+    .bar:nth-child(2){height:80%;animation-delay:.1s;background:linear-gradient(180deg,var(--green),#15803d)}
+    .bar:nth-child(3){height:42%;animation-delay:.16s;background:linear-gradient(180deg,var(--violet),#6d28d9)}
+    .bar:nth-child(4){height:92%;animation-delay:.22s;background:linear-gradient(180deg,var(--amber),#d97706)}
+    .bar:nth-child(5){height:58%;animation-delay:.28s;background:linear-gradient(180deg,var(--rose),#be123c)}
+    .bar:nth-child(6){height:70%;animation-delay:.34s;background:linear-gradient(180deg,var(--cyan),#0284c7)}
+    .section{padding:78px 0;border-top:1px solid rgba(148,163,184,.12)}
+    .section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+    .eyebrow{color:#86efac;text-transform:uppercase;letter-spacing:1.8px;font-size:12px;font-weight:1000;margin-bottom:8px}
+    h2{font-size:clamp(32px,4.2vw,52px);line-height:1.05;margin:0;letter-spacing:-1.5px}
+    .lead{color:var(--muted);max-width:760px;margin:12px 0 0;font-size:17px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:24px;
+      padding:23px;
+      min-height:100%;
+      box-shadow:0 18px 50px rgba(0,0,0,.20);
+      transition:.25s ease;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:hover{transform:translateY(-6px);border-color:rgba(56,189,248,.42);box-shadow:0 30px 80px rgba(0,0,0,.30)}
+    .card:after{
+      content:"";position:absolute;inset:auto -30% -40% auto;width:210px;height:210px;border-radius:50%;
+      background:rgba(56,189,248,.08);filter:blur(4px);pointer-events:none;
+    }
+    .card h3{font-size:21px;line-height:1.25;margin:0 0 10px}
+    .card p{color:var(--muted);margin:0 0 16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .tag{
+      font-size:12px;font-weight:850;
+      color:#dbeafe;background:rgba(37,99,235,.18);
+      border:1px solid rgba(59,130,246,.30);
+      padding:5px 9px;border-radius:999px;
+    }
+    .project-feature{
+      grid-column:span 2;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(56,189,248,.21), transparent 23rem),
+        radial-gradient(circle at 100% 0%, rgba(34,197,94,.13), transparent 22rem),
+        rgba(15,23,42,.75);
+    }
+    .project-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+    .mini-kpi{padding:13px;border-radius:15px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}
+    .mini-kpi strong{display:block;font-size:22px}
+    .mini-kpi span{display:block;color:var(--muted);font-size:12px}
+    details{
+      border:1px solid rgba(148,163,184,.18);
+      background:rgba(255,255,255,.04);
+      border-radius:18px;
+      padding:15px 16px;
+      margin-top:14px;
+    }
+    summary{cursor:pointer;font-weight:950;color:#e0f2fe}
+    details ul{margin:12px 0 0;padding-left:20px;color:var(--muted)}
+    details li{margin:7px 0}
+    .timeline{display:grid;gap:16px}
+    .timeline-item{
+      display:grid;grid-template-columns:190px 1fr;gap:22px;
+      padding:22px;border-radius:23px;border:1px solid var(--line);
+      background:rgba(15,23,42,.62);
+    }
+    .timeline-date{color:var(--cyan);font-weight:950}
+    .timeline-item h3{margin:0 0 7px;font-size:21px}
+    .timeline-item p{margin:0;color:var(--muted)}
+    .skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .skill-card{border:1px solid var(--line);background:rgba(15,23,42,.62);border-radius:22px;padding:20px}
+    .skill-card h3{margin:0 0 12px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:9px}
+    .pill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.08);font-size:13px;font-weight:780;color:#dbeafe}
+    .contact-panel{
+      display:grid;grid-template-columns:1fr .8fr;gap:18px;align-items:stretch;
+      border:1px solid var(--line);background:linear-gradient(135deg,rgba(56,189,248,.12),rgba(167,139,250,.10));
+      border-radius:28px;padding:28px;box-shadow:var(--shadow)
+    }
+    .contact-list{display:grid;gap:12px}
+    .contact-link{padding:14px 15px;border:1px solid rgba(255,255,255,.09);background:rgba(0,0,0,.18);border-radius:16px;font-weight:850;color:#e0f2fe}
+    footer{padding:42px 0;color:var(--muted);border-top:1px solid rgba(148,163,184,.12)}
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.active{opacity:1;transform:translateY(0)}
+    .privacy{font-size:13px;color:#fde68a;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.24);border-radius:18px;padding:14px 16px;margin-top:20px}
+    @keyframes pulse{70%{box-shadow:0 0 0 12px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes floatIn{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @keyframes grow{from{height:0;opacity:.4}to{opacity:1}}
+    @media(max-width:960px){
+      .hero-grid,.cards,.skill-grid,.contact-panel{grid-template-columns:1fr}
+      .project-feature{grid-column:span 1}
+      .timeline-item{grid-template-columns:1fr}
+      .project-meta{grid-template-columns:repeat(2,1fr)}
+      .section-head{display:block}
+      .nav-inner{align-items:flex-start;flex-direction:column}
+    }
+    @media(max-width:560px){
+      .kpi-grid,.project-meta{grid-template-columns:1fr}
+      h1{letter-spacing:-1.6px}
+      .nav-links{gap:2px}
+      .nav-links a{font-size:13px;padding:7px 8px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top"><span class="logo">SS</span> Sabahuddin Shams</a>
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge"><span class="pulse"></span> Biomedical Operations • Healthcare Analytics • Business Analytics</div>
+        <h1>Building audit-ready systems for <span class="grad">medical device operations.</span></h1>
+        <p class="subtitle">
+          Biomedical engineering professional combining hospital equipment operations, preventive maintenance tracking, inventory reconciliation, validation support, procurement analysis, and dashboard reporting.
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">Explore Portfolio →</a>
+          <a class="btn green" href="#contact">Contact</a>
+          <a class="btn" href="#skills">View Skills</a>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="dash-top">
+          <div>
+            <div class="dash-title">Operations Analytics Snapshot</div>
+            <div style="color:var(--muted);font-size:13px">Biomedical PM + inventory workflow</div>
+          </div>
+          <div class="status">Live-style dashboard</div>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi"><strong>6,000+</strong><span>Infusion pump assets tracked</span></div>
+          <div class="kpi"><strong>PM</strong><span>Preventive maintenance workflow</span></div>
+          <div class="kpi"><strong>Excel</strong><span>XLOOKUP, COUNTIF, dashboards</span></div>
+          <div class="kpi"><strong>BI</strong><span>Operations reporting mindset</span></div>
+        </div>
+        <div class="mini-chart" aria-label="decorative dashboard chart">
+          <div class="bar" style="height:64%"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section reveal" id="about">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Candidate Profile</div>
+            <h2>Biomedical engineer with an analytics-first operations mindset.</h2>
+          </div>
+          <p class="lead">
+            I take messy daily tracking problems and turn them into structured workflows. My strongest work is in preventive maintenance tracking, inventory mismatch detection, duplicate control, procurement analysis, validation support, and KPI reporting.
+          </p>
+        </div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Biomedical Operations</h3>
+            <p>Medical device lifecycle, preventive maintenance, validation support, troubleshooting documentation, procurement coordination, and compliance tracking.</p>
+            <div class="tags"><span class="tag">Medical Devices</span><span class="tag">PM Tracking</span><span class="tag">Validation</span></div>
+          </div>
+          <div class="card">
+            <h3>Healthcare Analytics</h3>
+            <p>Excel-based automation, Power BI dashboards, PM completion metrics, missing inventory alerts, duplicate detection, and daily operational reporting.</p>
+            <div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">KPI Reporting</span></div>
+          </div>
+          <div class="card">
+            <h3>Business Analytics</h3>
+            <p>Forecasting, data cleaning, process improvement, decision support, operations reporting, and practical business problem solving.</p>
+            <div class="tags"><span class="tag">Analytics</span><span class="tag">Forecasting</span><span class="tag">Process Improvement</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Selected Work</div>
+            <h2>Portfolio projects</h2>
+          </div>
+          <p class="lead">Real project-style case studies that show hospital operations, analytics, biomedical engineering, and process improvement experience.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card project-feature">
+            <h3>Alaris Pump Preventive Maintenance & Inventory Reconciliation System</h3>
+            <p>
+              Built an Excel-based workflow to connect daily PM audits with a master inventory, reduce duplicate entries, flag missing assets, and keep monthly PM due counts accurate after completion updates.
+            </p>
+            <div class="project-meta">
+              <div class="mini-kpi"><strong>6,000+</strong><span>Assets tracked</span></div>
+              <div class="mini-kpi"><strong>XLOOKUP</strong><span>Audit-to-inventory link</span></div>
+              <div class="mini-kpi"><strong>COUNTIF</strong><span>Missing asset logic</span></div>
+              <div class="mini-kpi"><strong>Daily</strong><span>Update workflow</span></div>
+            </div>
+            <details open>
+              <summary>Case study details</summary>
+              <ul>
+                <li><b>Problem:</b> daily PM audit entries had to match the master inventory, but duplicate and missing asset entries caused count mismatches.</li>
+                <li><b>Solution:</b> created XLOOKUP-based PM date updates, duplicate asset highlighting, missing inventory alerts, and corrected backlog count logic.</li>
+                <li><b>Impact:</b> improved audit visibility, reduced manual checking, and made PM status easier to track across a large biomedical fleet.</li>
+              </ul>
+            </details>
+            <div class="tags">
+              <span class="tag">Excel</span><span class="tag">XLOOKUP</span><span class="tag">COUNTIF</span><span class="tag">COUNTIFS</span><span class="tag">Conditional Formatting</span><span class="tag">Healthcare Operations</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Medical Device Validation & Deployment Support</h3>
+            <p>Supported validation tracking, deployment coordination, issue documentation, and process follow-up for biomedical device workflows.</p>
+            <details>
+              <summary>What it demonstrates</summary>
+              <ul>
+                <li>Validation documentation discipline.</li>
+                <li>Cross-functional biomedical operations support.</li>
+                <li>Device lifecycle and process tracking.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">Validation</span><span class="tag">Device Lifecycle</span><span class="tag">Operations</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Biomedical Equipment Procurement & Vendor Analysis</h3>
+            <p>Supported purchasing decisions through equipment comparison, vendor review, cost analysis, and phased implementation planning.</p>
+            <details>
+              <summary>What it demonstrates</summary>
+              <ul>
+                <li>Procurement and vendor evaluation.</li>
+                <li>Cost-quality comparison.</li>
+                <li>Hospital equipment planning.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">Procurement</span><span class="tag">Vendor Analysis</span><span class="tag">Cost Review</span></div>
+          </article>
+
+          <article class="card">
+            <h3>AI-Driven Healthcare Supply Chain Optimization</h3>
+            <p>Analytics project connecting forecasting, clustering, and machine learning concepts to healthcare supply chain decision support.</p>
+            <details>
+              <summary>What it demonstrates</summary>
+              <ul>
+                <li>Forecasting and demand planning mindset.</li>
+                <li>Healthcare supply chain analytics.</li>
+                <li>Business-facing interpretation of analytics outputs.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">Python</span><span class="tag">Forecasting</span><span class="tag">ML Concepts</span></div>
+          </article>
+
+          <article class="card">
+            <h3>IoT-Enabled DRIPS Monitoring System</h3>
+            <p>Biomedical engineering project focused on IV drip monitoring, sensor-based detection, and clinical workflow support.</p>
+            <details>
+              <summary>What it demonstrates</summary>
+              <ul>
+                <li>Biomedical instrumentation knowledge.</li>
+                <li>Sensor-based patient-care workflow idea.</li>
+                <li>Engineering documentation and prototype thinking.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">Biomedical Engineering</span><span class="tag">IoT</span><span class="tag">Sensors</span></div>
+          </article>
+
+          <article class="card">
+            <h3>Medical Imaging & Lung Lesion Detection Workflow</h3>
+            <p>Biomedical imaging workflow involving CT/DICOM preprocessing concepts, segmentation, and feature preparation.</p>
+            <details>
+              <summary>What it demonstrates</summary>
+              <ul>
+                <li>Medical imaging workflow understanding.</li>
+                <li>DICOM/CT preprocessing concepts.</li>
+                <li>Biomedical analytics project positioning.</li>
+              </ul>
+            </details>
+            <div class="tags"><span class="tag">Medical Imaging</span><span class="tag">DICOM</span><span class="tag">Segmentation</span></div>
+          </article>
+        </div>
+
+        <div class="privacy">
+          Public portfolio note: upload only anonymized screenshots or mock/sample workbook images. Do not publish real asset tags, hospital internal data, employee names, file paths, or patient-related details.
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Experience</div>
+            <h2>Work & education snapshot</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Current / Recent</div>
+            <div><h3>Biomedical Operations / Project Support</h3><p>Biomedical device operations, validation tracking, lifecycle support, troubleshooting documentation, reporting, and process improvement.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2021–2023</div>
+            <div><h3>Medical Equipment Analyst / Biomedical Engineering Specialist — Medicover Hospitals</h3><p>Equipment planning, procurement support, preventive maintenance coordination, vendor evaluation, installation planning, and inventory control.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Graduate</div>
+            <div><h3>MS Business Analytics — University of New Haven</h3><p>Analytics, dashboards, forecasting, reporting, operations analysis, and decision support.</p></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Undergraduate</div>
+            <div><h3>B.Tech Biomedical Engineering</h3><p>Biomedical instrumentation, medical device principles, healthcare technology, and engineering projects.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Skills</div>
+            <h2>Recruiter-friendly skill map</h2>
+          </div>
+          <p class="lead">This portfolio is positioned for healthcare data analyst, business analyst, operations analyst, biomedical operations, quality/process support, and clinical engineering roles.</p>
+        </div>
+        <div class="skill-grid">
+          <div class="skill-card"><h3>Analytics</h3><div class="skill-list"><span class="pill">Advanced Excel</span><span class="pill">XLOOKUP</span><span class="pill">COUNTIF / COUNTIFS</span><span class="pill">Data Cleaning</span><span class="pill">KPI Reporting</span></div></div>
+          <div class="skill-card"><h3>BI & Data</h3><div class="skill-list"><span class="pill">Power BI</span><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">Dashboards</span><span class="pill">Forecasting</span></div></div>
+          <div class="skill-card"><h3>Healthcare Ops</h3><div class="skill-list"><span class="pill">PM Tracking</span><span class="pill">Inventory Reconciliation</span><span class="pill">Audit Readiness</span><span class="pill">Validation Support</span></div></div>
+          <div class="skill-card"><h3>Biomedical</h3><div class="skill-list"><span class="pill">Medical Devices</span><span class="pill">Device Lifecycle</span><span class="pill">Procurement</span><span class="pill">Vendor Analysis</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>Let’s connect.</h2>
+            <p class="lead">Open to biomedical operations, healthcare analytics, business analyst, operations analyst, quality/process support, and medical device workflow roles.</p>
+          </div>
+          <div class="contact-list">
+            <a class="contact-link" href="mailto:sabasarmads@gmail.com">Email: sabasarmads@gmail.com</a>
+            <a class="contact-link" href="https://www.linkedin.com/in/sabahuddinshams/">LinkedIn: Sabahuddin Shams</a>
+            <a class="contact-link" href="#">GitHub: Add your GitHub URL</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container">© 2026 Sabahuddin Shams • Biomedical Operations & Healthcare Analytics Portfolio</div></footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){ entry.target.classList.add('active'); }
+      });
+    },{threshold:.13});
+    reveals.forEach(el=>io.observe(el));
+
+    const cards = document.querySelectorAll('.card, .hero-card');
+    cards.forEach(card=>{
+      card.addEventListener('mousemove', e=>{
+        const r = card.getBoundingClientRect();
+        const x = e.clientX - r.left;
+        const y = e.clientY - r.top;
+        card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(56,189,248,.13), transparent 13rem), rgba(15,23,42,.72)`;
+      });
+      card.addEventListener('mouseleave', ()=>{
+        card.style.background = '';
+      });
+    });
+  </script>
+</body>
+</html>
