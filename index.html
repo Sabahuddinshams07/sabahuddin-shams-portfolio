@@ -262,14 +262,199 @@ details{border:1px solid rgba(160,190,220,.16);background:rgba(255,255,255,.04);
   .type-line{white-space:normal;border-right:0;animation:none}
 }
 
+
+/* ===== V6 HEALTHCARE + BIOMEDICAL + BUSINESS DATA THEME ===== */
+body{
+  background:
+    radial-gradient(circle at 8% 8%, rgba(0, 229, 255, .25), transparent 28rem),
+    radial-gradient(circle at 92% 12%, rgba(42, 255, 178, .18), transparent 28rem),
+    radial-gradient(circle at 50% 55%, rgba(156, 106, 255, .16), transparent 40rem),
+    linear-gradient(135deg, #031019 0%, #071529 38%, #09111f 68%, #03151a 100%) !important;
+}
+.medtech-bg{
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+  overflow:hidden;
+}
+.medtech-bg:before{
+  content:"";
+  position:absolute;
+  inset:-20%;
+  background:
+    conic-gradient(from 180deg at 50% 50%, rgba(57,197,255,.12), rgba(45,212,191,.07), rgba(155,140,255,.10), rgba(57,197,255,.12));
+  animation:slowSpin 28s linear infinite;
+  filter:blur(50px);
+  opacity:.75;
+}
+.medtech-grid{
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(57,197,255,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45,212,191,.045) 1px, transparent 1px);
+  background-size:72px 72px;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.80), transparent 86%);
+}
+.ecg-line{
+  position:absolute;
+  left:0;
+  right:0;
+  top:18%;
+  height:130px;
+  opacity:.30;
+}
+.ecg-line svg{
+  width:160%;
+  height:100%;
+  animation:ecgMove 16s linear infinite;
+}
+.dna-helix{
+  position:absolute;
+  right:3%;
+  top:10%;
+  width:260px;
+  height:520px;
+  opacity:.18;
+  animation:helixFloat 7s ease-in-out infinite alternate;
+}
+.data-rain{
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle, rgba(57,197,255,.26) 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(45,212,191,.20) 1px, transparent 1.8px);
+  background-size:90px 110px, 130px 150px;
+  animation:rainDrift 18s linear infinite;
+  opacity:.22;
+}
+.hero{
+  background:
+    linear-gradient(120deg, rgba(0,229,255,.04), transparent 38%),
+    linear-gradient(240deg, rgba(45,212,191,.055), transparent 42%);
+}
+.badge{
+  box-shadow:0 0 38px rgba(57,197,255,.16), inset 0 0 22px rgba(57,197,255,.06);
+}
+h1{
+  text-shadow:0 0 38px rgba(57,197,255,.16);
+}
+.hero-card,.card,.experience-card,.contact-panel,.skill-card,.cert-card,.impact,.role{
+  backdrop-filter:blur(14px);
+}
+.card:hover,.cert-card:hover,.skill-card:hover,.role:hover{
+  box-shadow:0 0 0 1px rgba(57,197,255,.18), 0 30px 90px rgba(0,0,0,.32), 0 0 60px rgba(57,197,255,.08);
+}
+.cert-grid{
+  grid-template-columns:repeat(3,1fr) !important;
+}
+.cert-card{
+  position:relative;
+  overflow:hidden;
+  min-height:185px;
+  transition:.24s ease;
+}
+.cert-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(57,197,255,.36);
+}
+.cert-card:before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:radial-gradient(circle at 0 0, rgba(57,197,255,.16), transparent 16rem);
+  pointer-events:none;
+}
+.cert-provider{
+  color:#86efac;
+  font-weight:950;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1.3px;
+  margin-bottom:8px;
+}
+.cert-card h3{
+  position:relative;
+  font-size:19px;
+}
+.cert-card p{
+  position:relative;
+}
+.cert-level{
+  position:absolute;
+  top:16px;
+  right:16px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(0,0,0,.20);
+  border-radius:999px;
+  padding:5px 8px;
+  color:#dff9ff;
+  font-size:11px;
+  font-weight:900;
+}
+.cert-note{
+  margin-top:22px;
+  color:#fde68a;
+  background:rgba(251,191,36,.08);
+  border:1px solid rgba(251,191,36,.24);
+  border-radius:18px;
+  padding:14px 16px;
+  font-size:13px;
+}
+@keyframes slowSpin{
+  to{transform:rotate(360deg)}
+}
+@keyframes ecgMove{
+  from{transform:translateX(0)}
+  to{transform:translateX(-38%)}
+}
+@keyframes helixFloat{
+  from{transform:translateY(0) rotate(0deg)}
+  to{transform:translateY(28px) rotate(4deg)}
+}
+@keyframes rainDrift{
+  from{background-position:0 0, 0 0}
+  to{background-position:160px 260px, -180px 220px}
+}
+@media(max-width:980px){
+  .cert-grid{grid-template-columns:1fr !important}
+  .dna-helix{display:none}
+}
+
 </style>
 </head>
 <body>
+
+<div class="medtech-bg" aria-hidden="true">
+  <div class="medtech-grid"></div>
+  <div class="data-rain"></div>
+  <div class="ecg-line">
+    <svg viewBox="0 0 1400 130" preserveAspectRatio="none">
+      <path d="M0 70 L160 70 L190 70 L215 28 L245 105 L280 70 L420 70 L450 70 L478 38 L510 98 L545 70 L710 70 L740 70 L765 30 L795 108 L830 70 L990 70 L1020 70 L1048 42 L1080 98 L1115 70 L1400 70" fill="none" stroke="rgba(57,197,255,.82)" stroke-width="3"/>
+    </svg>
+  </div>
+  <svg class="dna-helix" viewBox="0 0 220 520">
+    <path d="M55 10 C180 80, 180 160, 55 230 C-40 300, -30 400, 160 510" fill="none" stroke="rgba(57,197,255,.65)" stroke-width="4"/>
+    <path d="M165 10 C40 80, 40 160, 165 230 C260 300, 250 400, 60 510" fill="none" stroke="rgba(45,212,191,.65)" stroke-width="4"/>
+    <g stroke="rgba(238,248,255,.42)" stroke-width="2">
+      <line x1="65" y1="45" x2="154" y2="45"/>
+      <line x1="83" y1="95" x2="137" y2="95"/>
+      <line x1="62" y1="145" x2="158" y2="145"/>
+      <line x1="48" y1="205" x2="172" y2="205"/>
+      <line x1="44" y1="275" x2="176" y2="275"/>
+      <line x1="68" y1="340" x2="152" y2="340"/>
+      <line x1="88" y1="405" x2="132" y2="405"/>
+      <line x1="64" y1="468" x2="156" y2="468"/>
+    </g>
+  </svg>
+</div>
+
 <div class="cursor-glow" id="cursorGlow"></div>
 <div class="orb-field"><span class="orb"></span><span class="orb"></span><span class="orb"></span><span class="orb"></span><span class="orb"></span></div>
 <nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><span class="logo">SS</span> Sabahuddin Shams</a><div class="nav-links"><a href="#about">Profile</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#roles">Roles</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero" id="top"><div class="container hero-grid"><div><div class="badge"><span class="pulse"></span> Health IT • Biomedical Operations • Data Analytics • Project Execution</div><h1>From device rooms to data rooms — <span class="grad">I build the bridge.</span></h1><p class="subtitle">Biomedical Engineering + Business Analytics professional turning hospital equipment operations into cleaner systems, stronger workflows, smarter dashboards, and execution-ready health technology processes.</p>
+<header class="hero" id="top"><div class="container hero-grid"><div><div class="badge"><span class="pulse"></span> Health IT • Biomedical Operations • Data Analytics • Project Execution</div><h1>From biomedical floors to data-driven systems — <span class="grad">I build the bridge.</span></h1><p class="subtitle">Biomedical Engineering + Business Analytics professional turning hospital equipment operations into cleaner systems, stronger workflows, smarter dashboards, and execution-ready health technology processes — built for the space where healthcare, technology, operations, and data meet.</p>
 
 <div class="intro-console">
   <div class="console-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
@@ -347,7 +532,121 @@ details{border:1px solid rgba(160,190,220,.16);background:rgba(255,255,255,.04);
 
 <section class="section reveal" id="skills"><div class="container"><div class="section-head"><div><div class="eyebrow">Skills</div><h2>Expanded skill map across healthcare, operations, IT systems, and analytics.</h2></div><p class="lead">This is intentionally broad so recruiters can map the profile to Health IT, data, operations, project, quality, and biomedical roles.</p></div><div class="skill-grid"><div class="skill-card"><h3>Healthcare Operations</h3><div class="skill-list"><span class="pill">Preventive Maintenance</span><span class="pill">PM Auditing</span><span class="pill">Compliance Tracking</span><span class="pill">Device Lifecycle</span><span class="pill">Service Coordination</span><span class="pill">Fleet Deployment</span><span class="pill">Work Orders</span><span class="pill">Operational Readiness</span></div></div><div class="skill-card"><h3>Health IT & Systems</h3><div class="skill-list"><span class="pill">Nuvolo</span><span class="pill">CMMS</span><span class="pill">ERP / Asset Workflows</span><span class="pill">Workflow Tracking</span><span class="pill">Database Maintenance</span><span class="pill">Status Visibility</span><span class="pill">Operational Records</span></div></div><div class="skill-card"><h3>Analytics & Reporting</h3><div class="skill-list"><span class="pill">Advanced Excel</span><span class="pill">XLOOKUP</span><span class="pill">COUNTIF / COUNTIFS</span><span class="pill">Power BI</span><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span><span class="pill">Dashboards</span><span class="pill">KPI Reporting</span><span class="pill">Forecasting</span></div></div><div class="skill-card"><h3>Quality, Business & Biomedical</h3><div class="skill-list"><span class="pill">Vendor Coordination</span><span class="pill">Procurement</span><span class="pill">Planning & Execution</span><span class="pill">Stakeholder Coordination</span><span class="pill">Root Cause Analysis</span><span class="pill">SOPs</span><span class="pill">IQ/OQ/PQ</span><span class="pill">GMP</span><span class="pill">ISO 13485 Awareness</span></div></div></div></div></section>
 
-<section class="section reveal" id="certifications"><div class="container"><div class="section-head"><div><div class="eyebrow">Certifications & Learning</div><h2>Certifications, workshops, and professional development.</h2></div><p class="lead">Added based on your previous certification/profile details. More can be added later exactly as shown on LinkedIn.</p></div><div class="cert-grid"><div class="cert-card"><h3>Microsoft Excel Expert</h3><p>Microsoft Office Specialist-style Excel credential / advanced Excel capability.</p><div class="tags"><span class="tag cert">Excel</span><span class="tag cert">Analytics</span></div></div><div class="cert-card"><h3>Data Modeling for Power BI</h3><p>Power BI data modeling and dashboard development learning.</p><div class="tags"><span class="tag cert">Power BI</span><span class="tag cert">Data Modeling</span></div></div><div class="cert-card"><h3>Power BI Beginner to Pro Workshop</h3><p>Business intelligence dashboarding and reporting skill development.</p><div class="tags"><span class="tag cert">BI</span><span class="tag cert">Dashboards</span></div></div><div class="cert-card"><h3>Introduction to R Programming</h3><p>Analytics coursework / certification focused on R-based data analysis.</p><div class="tags"><span class="tag cert">R</span><span class="tag cert">Data Analysis</span></div></div><div class="cert-card"><h3>NPTEL Roadmap for Patent Creation</h3><p>Elite certification, IIT Kharagpur, Jan–Mar 2021, 65%.</p><div class="tags"><span class="tag cert">Innovation</span><span class="tag cert">IP</span></div></div><div class="cert-card"><h3>8th International Patient Safety Conference</h3><p>Professional development exposure in patient safety and healthcare quality.</p><div class="tags"><span class="tag cert">Patient Safety</span><span class="tag cert">Healthcare</span></div></div><div class="cert-card"><h3>BIODHRUVA’19 National Level Symposium</h3><p>Biomedical engineering symposium participation and technical development.</p><div class="tags"><span class="tag cert">Biomedical</span><span class="tag cert">Symposium</span></div></div><div class="cert-card"><h3>AICASETM’19 International Conference</h3><p>Conference participation supporting academic and technical exposure.</p><div class="tags"><span class="tag cert">Conference</span><span class="tag cert">Technical</span></div></div></div></div></section>
+
+<section class="section reveal" id="certifications">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Certifications & Learning</div>
+        <h2>Certification stack across project management, analytics, BI, biomedical quality, and healthcare operations.</h2>
+      </div>
+      <p class="lead">A stronger credential section built to support Health IT, business analyst, project coordination, operations, and healthcare analytics roles.</p>
+    </div>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <span class="cert-level">Project</span>
+        <div class="cert-provider">Google / Coursera</div>
+        <h3>Google Project Management Professional Certificate</h3>
+        <p>Project planning, execution, stakeholder communication, Agile foundations, risk tracking, and operational project coordination.</p>
+        <div class="tags"><span class="tag cert">Project Management</span><span class="tag cert">Agile</span><span class="tag cert">Execution</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Project</span>
+        <div class="cert-provider">PRINCE2</div>
+        <h3>PRINCE2 Project Management</h3>
+        <p>Structured project governance, project controls, stages, risks, documentation, and delivery-focused project management.</p>
+        <div class="tags"><span class="tag cert">PRINCE2</span><span class="tag cert">Governance</span><span class="tag cert">PMO</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Analytics</span>
+        <div class="cert-provider">Python</div>
+        <h3>Python for Data Analytics</h3>
+        <p>Programming foundation for data cleaning, analysis, automation, healthcare operations reporting, and analytics workflows.</p>
+        <div class="tags"><span class="tag cert">Python</span><span class="tag cert">Data Analysis</span><span class="tag cert">Automation</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Analytics</span>
+        <div class="cert-provider">R Programming</div>
+        <h3>Introduction to R Programming</h3>
+        <p>R-based data analysis, data cleaning, visualization, coursework analytics, and statistical reporting workflows.</p>
+        <div class="tags"><span class="tag cert">R</span><span class="tag cert">Statistics</span><span class="tag cert">Visualization</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">BI</span>
+        <div class="cert-provider">Power BI</div>
+        <h3>Data Modeling for Power BI</h3>
+        <p>Data modeling, relationships, dashboard structures, reporting logic, and business intelligence foundations.</p>
+        <div class="tags"><span class="tag cert">Power BI</span><span class="tag cert">Data Modeling</span><span class="tag cert">BI</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">BI</span>
+        <div class="cert-provider">Power BI Workshop</div>
+        <h3>Power BI Beginner to Pro Workshop</h3>
+        <p>Dashboard creation, visuals, data transformation, slicers, KPIs, and operational reporting development.</p>
+        <div class="tags"><span class="tag cert">Dashboards</span><span class="tag cert">Reporting</span><span class="tag cert">KPI</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Excel</span>
+        <div class="cert-provider">Microsoft</div>
+        <h3>Microsoft Excel Expert</h3>
+        <p>Advanced Excel capability for formulas, lookups, data validation, reporting, reconciliation, and operational trackers.</p>
+        <div class="tags"><span class="tag cert">Excel</span><span class="tag cert">XLOOKUP</span><span class="tag cert">Reporting</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Quality</span>
+        <div class="cert-provider">NPTEL / IIT Kharagpur</div>
+        <h3>Roadmap for Patent Creation</h3>
+        <p>Innovation, intellectual property awareness, technical documentation, and product-development thinking.</p>
+        <div class="tags"><span class="tag cert">Innovation</span><span class="tag cert">IP</span><span class="tag cert">Technical</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Healthcare</span>
+        <div class="cert-provider">Patient Safety</div>
+        <h3>International Patient Safety Conference</h3>
+        <p>Healthcare quality, safety awareness, clinical operations, risk thinking, and patient-centered improvement exposure.</p>
+        <div class="tags"><span class="tag cert">Patient Safety</span><span class="tag cert">Healthcare Quality</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Biomedical</span>
+        <div class="cert-provider">Symposium</div>
+        <h3>BIODHRUVA’19 National Level Symposium</h3>
+        <p>Biomedical engineering technical exposure, academic engagement, and professional development.</p>
+        <div class="tags"><span class="tag cert">Biomedical</span><span class="tag cert">Technical</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">Conference</span>
+        <div class="cert-provider">AICASETM’19</div>
+        <h3>International Conference Participation</h3>
+        <p>Technical conference participation supporting academic, engineering, and research-facing professional exposure.</p>
+        <div class="tags"><span class="tag cert">Conference</span><span class="tag cert">Research</span></div>
+      </div>
+
+      <div class="cert-card">
+        <span class="cert-level">More</span>
+        <div class="cert-provider">LinkedIn / Learning</div>
+        <h3>Additional Analytics & Healthcare Learning</h3>
+        <p>Space reserved for adding your remaining LinkedIn certifications exactly by title, issuer, and date.</p>
+        <div class="tags"><span class="tag cert">To Update</span><span class="tag cert">LinkedIn</span></div>
+      </div>
+    </div>
+
+    <div class="cert-note">
+      Add exact certificate dates/credential IDs later from LinkedIn to make this section even stronger. The structure is now ready for all certifications.
+    </div>
+  </div>
+</section>
+
 
 <section class="section reveal" id="roles"><div class="container"><div class="section-head"><div><div class="eyebrow">Target Roles</div><h2>Roles this portfolio can support</h2></div><p class="lead">Built to position the same experience across healthcare, business operations, IT-supportive, and analyst pathways.</p></div><div class="roles"><div class="role">Health IT Project Coordinator</div><div class="role">Biomedical Operations Coordinator</div><div class="role">Healthcare Operations Analyst</div><div class="role">Business Analyst</div><div class="role">Clinical Engineering Coordinator</div><div class="role">Medical Device Workflow Analyst</div><div class="role">Project Support / PMO-style Role</div><div class="role">Healthcare Data / BI Analyst</div><div class="role">Quality / Process Support</div><div class="role">Medical Device Operations Analyst</div><div class="role">Healthcare Supply Chain Analyst</div><div class="role">Validation / Documentation Support</div></div></div></section>
 
