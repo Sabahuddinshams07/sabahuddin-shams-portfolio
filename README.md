@@ -1,29 +1,39 @@
-# Sabahuddin Shams High-Fidelity GitHub Portfolio
+# Sabahuddin Shams — Final GitHub Portfolio
 
-This version is a single-file high-fidelity portfolio.
+This is a single-file high-fidelity portfolio for GitHub Pages.
 
-## Why this version looks better
-All design CSS and animations are inside `index.html`, so it will not break if GitHub fails to load an external CSS file.
+## Candidate positioning
+
+**Health IT & Biomedical Operations Project Coordinator**  
+Biomedical Engineering + Business Analytics professional focused on healthcare operations, medical device lifecycle, PM tracking, validation support, inventory reconciliation, procurement analytics, dashboards, and process improvement.
 
 ## Repository name
-Use:
+
+Create the GitHub repository as:
 
 ```text
 sabahuddin-shams-portfolio
 ```
 
-## GitHub Pages link
-Your final link will look like:
+## Final portfolio URL
+
+After GitHub Pages is enabled, your portfolio should be:
 
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/sabahuddin-shams-portfolio
+https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio
 ```
 
-## Upload files
-Upload:
-- index.html
-- README.md
-- PUBLISHING_STEPS.md
+## Files to upload
 
-## Privacy
-Do not upload confidential hospital data, asset tags, employee names, internal file paths, or patient-related information.
+Upload these files:
+
+```text
+index.html
+README.md
+PUBLISHING_STEPS.md
+PORTFOLIO_CONTENT_GUIDE.md
+```
+
+## Important privacy note
+
+Do not upload confidential hospital workbooks, real asset tags, internal file paths, employee names, patient information, or unapproved hospital screenshots. Use anonymized screenshots or mock dashboards only.
