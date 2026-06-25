@@ -1,39 +1,15 @@
-# Sabahuddin Shams — Final GitHub Portfolio
+# Sabahuddin Shams — Detailed Interactive Portfolio
 
-This is a single-file high-fidelity portfolio for GitHub Pages.
+This version updates the portfolio content to better reflect the full scope of work:
 
-## Candidate positioning
+- Corrected **BD Alaris** device project naming
+- Expanded NYU Langone side into Health IT + Biomedical Operations + Vendor Coordination + Nuvolo + Fleet Deployment
+- Expanded Medicover side into planning, procurement, operations, and biomedical engineering support
+- Added more detailed project cards and interactive sections
+- Kept the site as a **single-file HTML** design so styling does not break
 
-**Health IT & Biomedical Operations Project Coordinator**  
-Biomedical Engineering + Business Analytics professional focused on healthcare operations, medical device lifecycle, PM tracking, validation support, inventory reconciliation, procurement analytics, dashboards, and process improvement.
+## Publish / Update
+Replace the existing `index.html` in your GitHub repo with this updated one, then commit the change.
 
-## Repository name
-
-Create the GitHub repository as:
-
-```text
-sabahuddin-shams-portfolio
-```
-
-## Final portfolio URL
-
-After GitHub Pages is enabled, your portfolio should be:
-
-```text
-https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio
-```
-
-## Files to upload
-
-Upload these files:
-
-```text
-index.html
-README.md
-PUBLISHING_STEPS.md
-PORTFOLIO_CONTENT_GUIDE.md
-```
-
-## Important privacy note
-
-Do not upload confidential hospital workbooks, real asset tags, internal file paths, employee names, patient information, or unapproved hospital screenshots. Use anonymized screenshots or mock dashboards only.
+## Privacy note
+Use only anonymized screenshots or sample dashboards if you later add visuals from real workbooks or internal systems.
