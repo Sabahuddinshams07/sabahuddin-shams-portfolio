@@ -4,22 +4,24 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Sabahuddin Shams | Health IT, Biomedical Operations & Data Analytics Portfolio</title>
-<meta name="description" content="Detailed interactive portfolio of Sabahuddin Shams covering Health IT, biomedical operations, vendor coordination, Nuvolo, PM compliance, analytics, and project execution." />
+<meta name="description" content="Sabahuddin Shams portfolio: Health IT, biomedical operations, BD Alaris fleet deployment, Nuvolo, vendor coordination, PM compliance, healthcare analytics, procurement, validation, dashboards, and project execution." />
 <style>
 :root{
-  --bg:#06101a; --bg2:#0a1424; --card:rgba(10,20,36,.76); --line:rgba(160,190,220,.18);
-  --text:#eef8ff; --muted:#a9bbcf; --cyan:#39c5ff; --blue:#2563eb; --green:#2dd4bf;
-  --lime:#86efac; --violet:#9b8cff; --amber:#fbbf24; --rose:#fb7185; --shadow:0 26px 80px rgba(0,0,0,.35);
+  --bg:#06101a; --bg2:#0a1424; --card:rgba(10,20,36,.78); --card2:rgba(18,32,54,.78);
+  --line:rgba(160,190,220,.18); --line2:rgba(160,190,220,.32);
+  --text:#eef8ff; --muted:#a9bbcf; --soft:#d8ecff;
+  --cyan:#39c5ff; --blue:#2563eb; --green:#2dd4bf; --lime:#86efac;
+  --violet:#9b8cff; --amber:#fbbf24; --rose:#fb7185; --shadow:0 26px 80px rgba(0,0,0,.36);
 }
 *{box-sizing:border-box} html{scroll-behavior:smooth}
 body{
   margin:0; color:var(--text);
   font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   background:
-    radial-gradient(circle at 12% 8%, rgba(57,197,255,.18), transparent 28rem),
-    radial-gradient(circle at 88% 10%, rgba(45,212,191,.12), transparent 26rem),
-    radial-gradient(circle at 50% 58%, rgba(155,140,255,.10), transparent 34rem),
-    linear-gradient(180deg,#04101a 0%,#091424 45%,#06111d 100%);
+    radial-gradient(circle at 10% 6%, rgba(57,197,255,.20), transparent 30rem),
+    radial-gradient(circle at 88% 8%, rgba(45,212,191,.14), transparent 26rem),
+    radial-gradient(circle at 50% 58%, rgba(155,140,255,.11), transparent 36rem),
+    linear-gradient(180deg,#04101a 0%,#091424 46%,#06111d 100%);
   line-height:1.65; overflow-x:hidden;
 }
 body:before{
@@ -27,279 +29,335 @@ body:before{
   background-image:linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
   background-size:58px 58px; mask-image:linear-gradient(to bottom, rgba(0,0,0,.65), transparent 78%);
 }
-a{text-decoration:none; color:inherit} .container{width:min(1180px,92%); margin:0 auto}
-.nav{position:sticky; top:0; z-index:100; background:rgba(5,11,22,.82); backdrop-filter:blur(16px); border-bottom:1px solid var(--line)}
-.nav-inner{display:flex; align-items:center; justify-content:space-between; gap:18px; padding:14px 0}
-.brand{display:flex; align-items:center; gap:12px; font-weight:1000}
-.logo{width:40px; height:40px; border-radius:14px; display:grid; place-items:center; background:linear-gradient(135deg,var(--cyan),var(--green)); color:#031019; font-weight:1000; box-shadow:0 0 32px rgba(57,197,255,.30)}
-.nav-links{display:flex; flex-wrap:wrap; gap:6px}
-.nav-links a{padding:8px 11px; border-radius:999px; color:var(--muted); font-weight:800; font-size:14px; transition:.2s}
-.nav-links a:hover{background:rgba(255,255,255,.07); color:var(--text)}
-.hero{min-height:calc(100vh - 70px); display:grid; align-items:center; padding:78px 0 56px}
-.hero-grid{display:grid; grid-template-columns:1.14fr .86fr; gap:30px; align-items:center}
-.badge{display:inline-flex; align-items:center; gap:9px; border:1px solid rgba(57,197,255,.24); background:rgba(57,197,255,.10); color:#dff9ff; font-size:14px; font-weight:900; padding:9px 13px; border-radius:999px}
-.pulse{width:9px; height:9px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 0 rgba(134,239,172,.8); animation:pulse 1.9s infinite}
-h1{margin:18px 0 20px; line-height:.98; letter-spacing:-3px; font-size:clamp(42px,7vw,84px)}
-.grad{background:linear-gradient(90deg,var(--cyan),var(--green),var(--violet)); -webkit-background-clip:text; background-clip:text; color:transparent}
-.subtitle{color:var(--muted); font-size:clamp(18px,2.15vw,23px); margin:0; max-width:840px}
-.hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
-.btn{display:inline-flex; align-items:center; gap:10px; padding:13px 18px; border-radius:14px; border:1px solid var(--line); background:rgba(255,255,255,.06); font-weight:900; transition:.22s; box-shadow:0 10px 28px rgba(0,0,0,.16)}
-.btn:hover{transform:translateY(-2px); background:rgba(255,255,255,.10)}
-.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue)); border-color:transparent}
-.btn.green{background:linear-gradient(135deg,var(--green),#0f766e); border-color:transparent}
-.hero-card{border:1px solid var(--line); border-radius:30px; padding:24px; background:linear-gradient(180deg, rgba(10,20,36,.9), rgba(10,20,36,.68)); box-shadow:var(--shadow); position:relative; overflow:hidden}
-.hero-card:before{content:""; position:absolute; inset:-1px; background:radial-gradient(circle at 18% 0%, rgba(57,197,255,.26), transparent 20rem); pointer-events:none}
-.dash-head{display:flex; align-items:center; justify-content:space-between; gap:14px}
-.dash-title{font-size:18px; font-weight:1000} .dash-sub{color:var(--muted); font-size:13px}
-.status{font-size:12px; font-weight:900; border-radius:999px; white-space:nowrap; border:1px solid rgba(45,212,191,.26); color:#c8fff5; background:rgba(45,212,191,.12); padding:5px 9px}
-.kpi-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px}
-.kpi{padding:16px; border-radius:18px; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.08)}
-.kpi strong{display:block; font-size:28px; line-height:1; margin-bottom:8px}
-.kpi span{color:var(--muted); font-size:13px}
-.mini-chart{display:flex; align-items:end; gap:8px; height:120px; padding:14px; margin-top:18px; border-radius:18px; background:rgba(0,0,0,.18); border:1px solid rgba(255,255,255,.08)}
-.bar{flex:1; min-height:18px; border-radius:999px 999px 6px 6px; animation:grow 1s ease both}
-.bar:nth-child(1){height:65%; background:linear-gradient(180deg,var(--cyan),#0284c7)}
-.bar:nth-child(2){height:82%; background:linear-gradient(180deg,var(--green),#0f766e)}
-.bar:nth-child(3){height:56%; background:linear-gradient(180deg,var(--violet),#6d28d9)}
-.bar:nth-child(4){height:92%; background:linear-gradient(180deg,var(--amber),#d97706)}
-.bar:nth-child(5){height:50%; background:linear-gradient(180deg,var(--rose),#be123c)}
-.bar:nth-child(6){height:70%; background:linear-gradient(180deg,var(--cyan),var(--green))}
-.section{padding:78px 0; border-top:1px solid rgba(160,190,220,.12)}
-.section-head{display:flex; justify-content:space-between; gap:28px; align-items:end; margin-bottom:28px}
-.eyebrow{font-size:12px; font-weight:1000; text-transform:uppercase; letter-spacing:1.8px; color:#86efac; margin-bottom:8px}
-h2{font-size:clamp(31px,4vw,50px); line-height:1.06; margin:0; letter-spacing:-1.4px}
-.lead{color:var(--muted); font-size:17px; max-width:760px; margin:12px 0 0}
-.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-.card{background:var(--card); border:1px solid var(--line); border-radius:24px; padding:23px; box-shadow:0 18px 50px rgba(0,0,0,.18); position:relative; overflow:hidden; transition:.24s}
-.card:hover{transform:translateY(-6px); border-color:rgba(57,197,255,.32)}
-.card h3{margin:0 0 10px; font-size:21px; line-height:1.25}
-.card p{color:var(--muted); margin:0 0 14px}
-.tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
-.tag{font-size:12px; font-weight:850; color:#dbeafe; border:1px solid rgba(59,130,246,.30); background:rgba(37,99,235,.18); padding:5px 9px; border-radius:999px}
-.tag.real{background:rgba(45,212,191,.14); border-color:rgba(45,212,191,.26); color:#d8fff9}
-.tag.demo{background:rgba(155,140,255,.16); border-color:rgba(155,140,255,.28); color:#efe9ff}
-.tag.academic{background:rgba(251,191,36,.14); border-color:rgba(251,191,36,.28); color:#fff4cc}
-.tag.ops{background:rgba(57,197,255,.16); border-color:rgba(57,197,255,.28); color:#dcf7ff}
-.impact-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:22px}
-.impact,.role,.skill-card,.exp-box{padding:18px; border-radius:20px; border:1px solid var(--line); background:rgba(255,255,255,.045)}
-.impact strong{display:block; font-size:20px; margin-bottom:8px}
-.impact span{color:var(--muted); font-size:14px}
-.filters,.tabs{display:flex; flex-wrap:wrap; gap:10px; margin-bottom:18px}
-.filter-btn,.tab-btn{border:1px solid var(--line); background:rgba(255,255,255,.05); color:#dcecff; padding:10px 14px; border-radius:999px; cursor:pointer; font-weight:850; transition:.2s}
-.filter-btn.active,.filter-btn:hover,.tab-btn.active,.tab-btn:hover{background:rgba(57,197,255,.18); border-color:rgba(57,197,255,.28)}
-details{border:1px solid rgba(160,190,220,.16); background:rgba(255,255,255,.04); border-radius:18px; padding:15px 16px; margin-top:14px}
-summary{cursor:pointer; color:#dff5ff; font-weight:950}
-details ul{margin:12px 0 0; padding-left:20px; color:var(--muted)} details li{margin:7px 0}
-.featured{grid-column:span 2; background:radial-gradient(circle at 0% 0%, rgba(57,197,255,.20), transparent 23rem),radial-gradient(circle at 100% 0%, rgba(45,212,191,.12), transparent 20rem),rgba(10,20,36,.78)}
-.project-meta{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:18px 0}
-.mini-kpi{padding:13px; border-radius:14px; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.08)}
-.mini-kpi strong{display:block; font-size:22px}.mini-kpi span{display:block; color:var(--muted); font-size:12px}
-.tab-panel{display:none}.tab-panel.active{display:block}
-.experience-card,.contact-panel{border:1px solid var(--line); background:rgba(10,20,36,.78); border-radius:24px; padding:24px; box-shadow:var(--shadow)}
-.exp-top{display:flex; justify-content:space-between; gap:16px; align-items:flex-start; flex-wrap:wrap}
-.exp-title{font-size:24px; font-weight:1000}.exp-sub{color:var(--muted); font-size:15px}
-.exp-grid,.skill-grid,.roles{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
-.exp-box h4,.skill-card h3{margin:0 0 10px; font-size:17px}
-.exp-box ul{margin:0; padding-left:18px; color:var(--muted)} .exp-box li{margin:7px 0}
-.skill-list{display:flex; flex-wrap:wrap; gap:9px}
-.pill{padding:8px 10px; border-radius:999px; background:rgba(255,255,255,.065); border:1px solid rgba(255,255,255,.08); color:#dcecff; font-size:13px; font-weight:780}
-.role{font-weight:900; color:#e6f4ff}
-.contact-panel{display:grid; grid-template-columns:1fr .85fr; gap:18px; background:linear-gradient(135deg, rgba(57,197,255,.12), rgba(155,140,255,.08))}
-.contact-list{display:grid; gap:12px}
-.contact-link{padding:14px 15px; border-radius:16px; border:1px solid rgba(255,255,255,.09); background:rgba(0,0,0,.18); color:#e6f4ff; font-weight:850; transition:.2s; overflow-wrap:anywhere}
-.contact-link:hover{transform:translateY(-2px); background:rgba(0,0,0,.26)}
-.privacy{font-size:13px; color:#fde68a; background:rgba(251,191,36,.08); border:1px solid rgba(251,191,36,.24); border-radius:18px; padding:14px 16px; margin-top:20px}
-footer{padding:42px 0; color:var(--muted); border-top:1px solid rgba(160,190,220,.12)}
-.reveal{opacity:0; transform:translateY(22px); transition:opacity .7s ease, transform .7s ease}.reveal.active{opacity:1; transform:translateY(0)}
-@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(134,239,172,0)}100%{box-shadow:0 0 0 0 rgba(134,239,172,0)}} @keyframes grow{from{height:0; opacity:.4}to{opacity:1}}
-@media(max-width:980px){.hero-grid,.cards,.skill-grid,.roles,.contact-panel,.impact-grid,.exp-grid{grid-template-columns:1fr}.featured{grid-column:span 1}.project-meta{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.nav-inner{align-items:flex-start; flex-direction:column}}
-@media(max-width:640px){.kpi-grid,.project-meta{grid-template-columns:1fr}.nav-links a{font-size:13px; padding:7px 8px}h1{letter-spacing:-1.6px}}
+a{text-decoration:none;color:inherit}.container{width:min(1200px,92%);margin:0 auto}
+.nav{position:sticky;top:0;z-index:100;background:rgba(5,11,22,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:1000}
+.logo{width:40px;height:40px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--green));color:#031019;font-weight:1000;box-shadow:0 0 32px rgba(57,197,255,.30)}
+.nav-links{display:flex;flex-wrap:wrap;gap:6px}.nav-links a{padding:8px 11px;border-radius:999px;color:var(--muted);font-weight:800;font-size:14px;transition:.2s}.nav-links a:hover{background:rgba(255,255,255,.07);color:var(--text)}
+.hero{min-height:calc(100vh - 70px);display:grid;align-items:center;padding:78px 0 56px}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:30px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(57,197,255,.24);background:rgba(57,197,255,.10);color:#dff9ff;font-size:14px;font-weight:900;padding:9px 13px;border-radius:999px;animation:fadeUp .7s ease both}
+.pulse{width:9px;height:9px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(134,239,172,.8);animation:pulse 1.9s infinite}
+h1{margin:18px 0 20px;line-height:.98;letter-spacing:-3px;font-size:clamp(42px,7vw,84px);animation:fadeUp .8s ease .05s both}
+.grad{background:linear-gradient(90deg,var(--cyan),var(--green),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
+.subtitle{color:var(--muted);font-size:clamp(18px,2.15vw,23px);margin:0;max-width:860px;animation:fadeUp .8s ease .1s both}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;animation:fadeUp .8s ease .17s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:900;transition:.22s;box-shadow:0 10px 28px rgba(0,0,0,.16)}
+.btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.10)}
+.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--blue));border-color:transparent}.btn.green{background:linear-gradient(135deg,var(--green),#0f766e);border-color:transparent}
+.hero-card{border:1px solid var(--line);border-radius:30px;padding:24px;background:linear-gradient(180deg,rgba(10,20,36,.92),rgba(10,20,36,.68));box-shadow:var(--shadow);position:relative;overflow:hidden;animation:floatIn .9s ease .12s both}
+.hero-card:before{content:"";position:absolute;inset:-1px;background:radial-gradient(circle at 18% 0%,rgba(57,197,255,.26),transparent 20rem);pointer-events:none}
+.dash-head{display:flex;align-items:center;justify-content:space-between;gap:14px}.dash-title{font-size:18px;font-weight:1000}.dash-sub{color:var(--muted);font-size:13px}
+.status{font-size:12px;font-weight:900;border-radius:999px;white-space:nowrap;border:1px solid rgba(45,212,191,.26);color:#c8fff5;background:rgba(45,212,191,.12);padding:5px 9px}
+.kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.kpi{padding:16px;border-radius:18px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}
+.kpi strong{display:block;font-size:27px;line-height:1;margin-bottom:8px}.kpi span{color:var(--muted);font-size:13px}
+.mini-chart{display:flex;align-items:end;gap:8px;height:120px;padding:14px;margin-top:18px;border-radius:18px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.08)}
+.bar{flex:1;min-height:18px;border-radius:999px 999px 6px 6px;animation:grow 1s ease both}.bar:nth-child(1){height:65%;background:linear-gradient(180deg,var(--cyan),#0284c7)}.bar:nth-child(2){height:82%;background:linear-gradient(180deg,var(--green),#0f766e)}.bar:nth-child(3){height:56%;background:linear-gradient(180deg,var(--violet),#6d28d9)}.bar:nth-child(4){height:92%;background:linear-gradient(180deg,var(--amber),#d97706)}.bar:nth-child(5){height:50%;background:linear-gradient(180deg,var(--rose),#be123c)}.bar:nth-child(6){height:70%;background:linear-gradient(180deg,var(--cyan),var(--green))}
+.section{padding:78px 0;border-top:1px solid rgba(160,190,220,.12)}.section-head{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:28px}
+.eyebrow{font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:1.8px;color:#86efac;margin-bottom:8px}
+h2{font-size:clamp(31px,4vw,50px);line-height:1.06;margin:0;letter-spacing:-1.4px}.lead{color:var(--muted);font-size:17px;max-width:780px;margin:12px 0 0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:23px;box-shadow:0 18px 50px rgba(0,0,0,.18);position:relative;overflow:hidden;transition:.24s}
+.card:hover{transform:translateY(-6px);border-color:rgba(57,197,255,.32)}.card h3{margin:0 0 10px;font-size:21px;line-height:1.25}.card p{color:var(--muted);margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{font-size:12px;font-weight:850;color:#dbeafe;border:1px solid rgba(59,130,246,.30);background:rgba(37,99,235,.18);padding:5px 9px;border-radius:999px}
+.tag.real{background:rgba(45,212,191,.14);border-color:rgba(45,212,191,.26);color:#d8fff9}.tag.demo{background:rgba(155,140,255,.16);border-color:rgba(155,140,255,.28);color:#efe9ff}.tag.academic{background:rgba(251,191,36,.14);border-color:rgba(251,191,36,.28);color:#fff4cc}.tag.ops{background:rgba(57,197,255,.16);border-color:rgba(57,197,255,.28);color:#dcf7ff}.tag.cert{background:rgba(134,239,172,.12);border-color:rgba(134,239,172,.25);color:#dcfce7}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:22px}.impact,.role,.skill-card,.exp-box,.cert-card{padding:18px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.045)}
+.impact strong{display:block;font-size:20px;margin-bottom:8px}.impact span{color:var(--muted);font-size:14px}
+.filters,.tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}.filter-btn,.tab-btn{border:1px solid var(--line);background:rgba(255,255,255,.05);color:#dcecff;padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:850;transition:.2s}.filter-btn.active,.filter-btn:hover,.tab-btn.active,.tab-btn:hover{background:rgba(57,197,255,.18);border-color:rgba(57,197,255,.28)}
+details{border:1px solid rgba(160,190,220,.16);background:rgba(255,255,255,.04);border-radius:18px;padding:15px 16px;margin-top:14px}summary{cursor:pointer;color:#dff5ff;font-weight:950}details ul{margin:12px 0 0;padding-left:20px;color:var(--muted)}details li{margin:7px 0}
+.featured{grid-column:span 2;background:radial-gradient(circle at 0% 0%,rgba(57,197,255,.20),transparent 23rem),radial-gradient(circle at 100% 0%,rgba(45,212,191,.12),transparent 20rem),rgba(10,20,36,.78)}
+.project-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}.mini-kpi{padding:13px;border-radius:14px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.08)}.mini-kpi strong{display:block;font-size:22px}.mini-kpi span{display:block;color:var(--muted);font-size:12px}
+.tab-panel{display:none}.tab-panel.active{display:block}.experience-card,.contact-panel{border:1px solid var(--line);background:rgba(10,20,36,.78);border-radius:24px;padding:24px;box-shadow:var(--shadow)}
+.exp-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;flex-wrap:wrap}.exp-title{font-size:24px;font-weight:1000}.exp-sub{color:var(--muted);font-size:15px}
+.exp-grid,.skill-grid,.roles,.cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.exp-box h4,.skill-card h3,.cert-card h3{margin:0 0 10px;font-size:17px}.exp-box ul{margin:0;padding-left:18px;color:var(--muted)}.exp-box li{margin:7px 0}
+.skill-list{display:flex;flex-wrap:wrap;gap:9px}.pill{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.08);color:#dcecff;font-size:13px;font-weight:780}.role{font-weight:900;color:#e6f4ff}.cert-card p{margin:0;color:var(--muted)}
+.contact-panel{display:grid;grid-template-columns:1fr .85fr;gap:18px;background:linear-gradient(135deg,rgba(57,197,255,.12),rgba(155,140,255,.08))}.contact-list{display:grid;gap:12px}.contact-link{padding:14px 15px;border-radius:16px;border:1px solid rgba(255,255,255,.09);background:rgba(0,0,0,.18);color:#e6f4ff;font-weight:850;transition:.2s;overflow-wrap:anywhere}.contact-link:hover{transform:translateY(-2px);background:rgba(0,0,0,.26)}
+.privacy{font-size:13px;color:#fde68a;background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.24);border-radius:18px;padding:14px 16px;margin-top:20px}footer{padding:42px 0;color:var(--muted);border-top:1px solid rgba(160,190,220,.12)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.active{opacity:1;transform:translateY(0)}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(134,239,172,0)}100%{box-shadow:0 0 0 0 rgba(134,239,172,0)}}@keyframes grow{from{height:0;opacity:.4}to{opacity:1}}@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}@keyframes floatIn{from{opacity:0;transform:translateY(28px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:980px){.hero-grid,.cards,.skill-grid,.roles,.contact-panel,.impact-grid,.exp-grid,.cert-grid{grid-template-columns:1fr}.featured{grid-column:span 1}.project-meta{grid-template-columns:repeat(2,1fr)}.section-head{display:block}.nav-inner{align-items:flex-start;flex-direction:column}}@media(max-width:640px){.kpi-grid,.project-meta{grid-template-columns:1fr}.nav-links a{font-size:13px;padding:7px 8px}h1{letter-spacing:-1.6px}}
+
+/* ===== V5 CRAZY INTERACTIVE INTRO + HEALTHCARE DATA THEME ===== */
+.cursor-glow{
+  position:fixed;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  pointer-events:none;
+  left:0;
+  top:0;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle, rgba(57,197,255,.18), rgba(45,212,191,.08) 38%, transparent 68%);
+  filter:blur(14px);
+  z-index:-1;
+  transition:opacity .2s ease;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 18% 35%, rgba(57,197,255,.12), transparent 16rem),
+    radial-gradient(circle at 76% 22%, rgba(134,239,172,.10), transparent 18rem),
+    radial-gradient(circle at 70% 82%, rgba(155,140,255,.12), transparent 22rem);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(90deg, rgba(57,197,255,.06) 1px, transparent 1px),
+    linear-gradient(rgba(45,212,191,.045) 1px, transparent 1px);
+  background-size:90px 90px;
+  transform:perspective(700px) rotateX(58deg) translateY(120px);
+  transform-origin:bottom;
+  opacity:.33;
+  pointer-events:none;
+}
+.orb-field{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.orb{
+  position:absolute;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--cyan);
+  box-shadow:0 0 26px rgba(57,197,255,.9);
+  opacity:.78;
+  animation:drift 9s ease-in-out infinite alternate;
+}
+.orb:nth-child(1){left:8%;top:18%;animation-duration:11s;background:var(--green)}
+.orb:nth-child(2){left:72%;top:16%;animation-duration:12s}
+.orb:nth-child(3){left:84%;top:62%;animation-duration:10s;background:var(--violet)}
+.orb:nth-child(4){left:22%;top:76%;animation-duration:13s;background:var(--amber)}
+.orb:nth-child(5){left:50%;top:40%;animation-duration:15s;background:var(--rose);opacity:.46}
+.intro-console{
+  margin-top:24px;
+  max-width:760px;
+  border:1px solid rgba(57,197,255,.22);
+  background:linear-gradient(135deg, rgba(0,0,0,.22), rgba(57,197,255,.055));
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 50px rgba(0,0,0,.25);
+  animation:fadeUp .8s ease .2s both;
+}
+.console-top{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:10px 14px;
+  border-bottom:1px solid rgba(160,190,220,.14);
+  background:rgba(255,255,255,.035);
+}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot.red{background:#fb7185}.dot.yellow{background:#fbbf24}.dot.green{background:#22c55e}
+.console-body{
+  padding:16px 18px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+  color:#dff8ff;
+  font-size:14px;
+}
+.console-line{margin:7px 0;color:#a9bbcf}
+.console-line strong{color:#86efac}
+.type-line{
+  display:inline-block;
+  border-right:2px solid var(--cyan);
+  white-space:nowrap;
+  overflow:hidden;
+  max-width:100%;
+  animation:typing 4.8s steps(72,end) 1, blink .8s step-end infinite;
+}
+.mission-strip{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:20px;
+  animation:fadeUp .8s ease .28s both;
+}
+.mission-chip{
+  border:1px solid rgba(160,190,220,.18);
+  background:rgba(255,255,255,.045);
+  border-radius:15px;
+  padding:12px 13px;
+  color:#dcecff;
+  font-weight:850;
+  font-size:13px;
+}
+.mission-chip span{
+  display:block;
+  color:var(--muted);
+  font-weight:700;
+  font-size:12px;
+  margin-top:3px;
+}
+.hero-card{
+  transform-style:preserve-3d;
+}
+.hero-card:hover{
+  transform:perspective(900px) rotateX(1deg) rotateY(-2deg) translateY(-3px);
+}
+.neural-map{
+  margin-top:18px;
+  border:1px solid rgba(255,255,255,.08);
+  background:rgba(0,0,0,.16);
+  border-radius:18px;
+  height:150px;
+  position:relative;
+  overflow:hidden;
+}
+.neural-map svg{
+  width:100%;
+  height:100%;
+}
+.neural-map circle{
+  filter:drop-shadow(0 0 8px rgba(57,197,255,.8));
+}
+.neural-map path{
+  stroke-dasharray:8;
+  animation:dash 8s linear infinite;
+}
+.story-panel{
+  margin-top:22px;
+  padding:18px;
+  border-radius:20px;
+  border:1px solid rgba(57,197,255,.20);
+  background:linear-gradient(135deg, rgba(57,197,255,.08), rgba(45,212,191,.045));
+}
+.story-panel h3{
+  margin:0 0 8px;
+  font-size:20px;
+}
+.story-panel p{
+  margin:0;
+  color:var(--muted);
+}
+@keyframes drift{
+  from{transform:translate3d(0,0,0) scale(1)}
+  to{transform:translate3d(42px,-38px,0) scale(1.35)}
+}
+@keyframes typing{
+  from{width:0}
+  to{width:100%}
+}
+@keyframes blink{
+  50%{border-color:transparent}
+}
+@keyframes dash{
+  to{stroke-dashoffset:-120}
+}
+@media(max-width:980px){
+  .mission-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  .mission-strip{grid-template-columns:1fr}
+  .type-line{white-space:normal;border-right:0;animation:none}
+}
+
 </style>
 </head>
 <body>
-<nav class="nav"><div class="container nav-inner">
-  <a class="brand" href="#top"><span class="logo">SS</span> Sabahuddin Shams</a>
-  <div class="nav-links">
-    <a href="#about">Profile</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#roles">Roles</a><a href="#contact">Contact</a>
-  </div>
-</div></nav>
+<div class="cursor-glow" id="cursorGlow"></div>
+<div class="orb-field"><span class="orb"></span><span class="orb"></span><span class="orb"></span><span class="orb"></span><span class="orb"></span></div>
+<nav class="nav"><div class="container nav-inner"><a class="brand" href="#top"><span class="logo">SS</span> Sabahuddin Shams</a><div class="nav-links"><a href="#about">Profile</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#certifications">Certifications</a><a href="#roles">Roles</a><a href="#contact">Contact</a></div></div></nav>
 
-<header class="hero" id="top"><div class="container hero-grid">
-  <div>
-    <div class="badge"><span class="pulse"></span> Health IT • Biomedical Operations • Data Analytics • Project Coordination</div>
-    <h1>Connecting <span class="grad">biomedical operations</span> with healthcare IT, analytics, and execution.</h1>
-    <p class="subtitle">Biomedical Engineering + Business Analytics professional with experience in vendor coordination, PM operations, new fleet deployment planning, database maintenance in Nuvolo, auditing, compliance tracking, medical device lifecycle support, and operational analytics.</p>
-    <div class="hero-actions">
-      <a class="btn primary" href="#projects">Explore Portfolio →</a>
-      <a class="btn green" href="https://www.linkedin.com/in/sabahuddin-shams-677192194/">LinkedIn</a>
-      <a class="btn" href="#experience">Experience</a>
-    </div>
+<header class="hero" id="top"><div class="container hero-grid"><div><div class="badge"><span class="pulse"></span> Health IT • Biomedical Operations • Data Analytics • Project Execution</div><h1>From device rooms to data rooms — <span class="grad">I build the bridge.</span></h1><p class="subtitle">Biomedical Engineering + Business Analytics professional turning hospital equipment operations into cleaner systems, stronger workflows, smarter dashboards, and execution-ready health technology processes.</p>
+
+<div class="intro-console">
+  <div class="console-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+  <div class="console-body">
+    <div class="console-line"><strong>system:</strong> biomedical operations detected</div>
+    <div class="console-line"><strong>mission:</strong> convert PMs, vendors, fleets, Nuvolo data, and audits into operational intelligence</div>
+    <div class="console-line"><strong>next:</strong> <span class="type-line">build scalable Health IT + analytics workflows for safer, smarter healthcare technology.</span></div>
   </div>
-  <aside class="hero-card">
-    <div class="dash-head"><div><div class="dash-title">Operations Snapshot</div><div class="dash-sub">Healthcare technology + workflow management</div></div><div class="status">Interactive portfolio</div></div>
-    <div class="kpi-grid">
-      <div class="kpi"><strong>BD Alaris</strong><span>PM load balance, audit and inventory workflow</span></div>
-      <div class="kpi"><strong>Nuvolo</strong><span>Database maintenance and workflow support</span></div>
-      <div class="kpi"><strong>Vendors</strong><span>3M, Philips, Zimmer, Welch Allyn, BD, AcuVein and more</span></div>
-      <div class="kpi"><strong>Ops + Data</strong><span>PMs, auditing, planning, execution, dashboards</span></div>
-    </div>
-    <div class="mini-chart"><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div></div>
-  </aside>
-</div></header>
+</div>
+<div class="mission-strip">
+  <div class="mission-chip">Biomedical Ops<span>PMs • audits • service flow</span></div>
+  <div class="mission-chip">Health IT Systems<span>Nuvolo • data integrity • workflows</span></div>
+  <div class="mission-chip">Business Execution<span>vendors • fleets • planning</span></div>
+  <div class="mission-chip">Analytics Layer<span>dashboards • KPIs • decisions</span></div>
+</div>
+<div class="hero-actions"><a class="btn primary" href="#projects">Explore Portfolio →</a><a class="btn green" href="https://www.linkedin.com/in/sabahuddin-shams-677192194/">LinkedIn</a><a class="btn" href="#experience">Experience</a></div></div><aside class="hero-card"><div class="dash-head"><div><div class="dash-title">Operations Snapshot</div><div class="dash-sub">Healthcare technology + workflow management</div></div><div class="status">Interactive portfolio</div></div><div class="kpi-grid"><div class="kpi"><strong>BD Alaris</strong><span>Fleet PM, audit, load balance and inventory workflow</span></div><div class="kpi"><strong>Nuvolo</strong><span>Database maintenance and workflow support</span></div><div class="kpi"><strong>Vendors</strong><span>3M, Philips, Zimmer, Welch Allyn, BD, AcuVein and more</span></div><div class="kpi"><strong>Ops + Data</strong><span>PMs, auditing, planning, execution, dashboards</span></div></div>
+<div class="neural-map" aria-label="healthcare operations network visual">
+  <svg viewBox="0 0 520 150" preserveAspectRatio="none">
+    <path d="M40 110 C120 20, 180 125, 260 65 S410 25, 480 95" fill="none" stroke="rgba(57,197,255,.65)" stroke-width="2"/>
+    <path d="M65 45 C150 100, 210 25, 300 92 S400 140, 465 55" fill="none" stroke="rgba(45,212,191,.55)" stroke-width="2"/>
+    <path d="M95 120 C190 75, 260 130, 360 72 S430 30, 492 120" fill="none" stroke="rgba(155,140,255,.48)" stroke-width="2"/>
+    <circle cx="40" cy="110" r="6" fill="#39c5ff"/>
+    <circle cx="120" cy="42" r="7" fill="#2dd4bf"/>
+    <circle cx="205" cy="108" r="6" fill="#9b8cff"/>
+    <circle cx="260" cy="65" r="8" fill="#86efac"/>
+    <circle cx="360" cy="72" r="6" fill="#39c5ff"/>
+    <circle cx="480" cy="95" r="7" fill="#fbbf24"/>
+    <text x="28" y="26" fill="rgba(238,248,255,.72)" font-size="13">Devices</text>
+    <text x="210" y="26" fill="rgba(238,248,255,.72)" font-size="13">Nuvolo</text>
+    <text x="405" y="26" fill="rgba(238,248,255,.72)" font-size="13">Insights</text>
+  </svg>
+</div>
+<div class="story-panel">
+  <h3>Operating at the intersection</h3>
+  <p>Biomedical technology, vendor coordination, fleet execution, CMMS data, PM compliance, and analytics reporting — all connected into one workflow mindset.</p>
+</div>
+</aside></div></header>
 
 <main>
-<section class="section reveal" id="about"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">Candidate Profile</div><h2>Detailed portfolio positioned for Health IT, biomedical operations, business operations, and data-driven roles.</h2></div><p class="lead">My work is not limited to one device line. I support vendor coordination, maintenance operations, audit workflows, planning and execution of new fleets, workflow tracking in Nuvolo, preventive maintenance compliance, and operational reporting across different manufacturers and hospital systems.</p></div>
-  <div class="cards">
-    <div class="card"><h3>Biomedical Operations</h3><p>Preventive maintenance workflows, operational auditing, equipment tracking, compliance follow-up, device lifecycle support, and service coordination.</p><div class="tags"><span class="tag ops">PM Operations</span><span class="tag ops">Auditing</span><span class="tag ops">Lifecycle</span></div></div>
-    <div class="card"><h3>Health IT & Systems</h3><p>Nuvolo database support, device data maintenance, workflow tracking, issue follow-up, system-oriented documentation, and operational visibility.</p><div class="tags"><span class="tag ops">Nuvolo</span><span class="tag ops">Health IT</span><span class="tag ops">Workflow Data</span></div></div>
-    <div class="card"><h3>Business & Analytics</h3><p>Data-backed reporting, vendor analysis, planning and execution support, KPI thinking, dashboard concepts, and business analytics applied to hospital operations.</p><div class="tags"><span class="tag ops">Analytics</span><span class="tag ops">Vendor Coordination</span><span class="tag ops">Planning</span></div></div>
-  </div>
-  <div class="impact-grid">
-    <div class="impact"><strong>Vendor Ecosystem</strong><span>Worked with multiple manufacturers including 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein and others.</span></div>
-    <div class="impact"><strong>Fleet Deployment</strong><span>Supported new fleet planning, coordination, and execution as part of operations and biomedical technology workflows.</span></div>
-    <div class="impact"><strong>Operational Control</strong><span>Managed PMs, auditing, service coordination, documentation, compliance follow-up, and issue tracking.</span></div>
-    <div class="impact"><strong>Data Mindset</strong><span>Connected technical work with dashboards, structured records, exception tracking, and business operations reporting.</span></div>
-  </div>
-</div></section>
+<section class="section reveal" id="about"><div class="container"><div class="section-head"><div><div class="eyebrow">Candidate Profile</div><h2>Detailed portfolio positioned for Health IT, biomedical operations, business operations, and data-driven roles.</h2></div><p class="lead">My work is not limited to one device line. I support vendor coordination, maintenance operations, audit workflows, planning and execution of new fleets, workflow tracking in Nuvolo, preventive maintenance compliance, database maintenance, and operational reporting across different manufacturers and hospital systems. The direction is clear: make healthcare technology operations more connected, measurable, and intelligence-driven.</p></div><div class="cards"><div class="card"><h3>Biomedical Operations</h3><p>Preventive maintenance workflows, operational auditing, equipment tracking, compliance follow-up, device lifecycle support, and service coordination.</p><div class="tags"><span class="tag ops">PM Operations</span><span class="tag ops">Auditing</span><span class="tag ops">Lifecycle</span></div></div><div class="card"><h3>Health IT & Systems</h3><p>Nuvolo database support, device data maintenance, workflow tracking, issue follow-up, system-oriented documentation, and operational visibility.</p><div class="tags"><span class="tag ops">Nuvolo</span><span class="tag ops">Health IT</span><span class="tag ops">Workflow Data</span></div></div><div class="card"><h3>Business & Analytics</h3><p>Data-backed reporting, vendor analysis, planning and execution support, KPI thinking, dashboard concepts, and business analytics applied to hospital operations.</p><div class="tags"><span class="tag ops">Analytics</span><span class="tag ops">Vendor Coordination</span><span class="tag ops">Planning</span></div></div></div><div class="impact-grid"><div class="impact"><strong>Vendor Ecosystem</strong><span>Worked with multiple manufacturers including 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein and others.</span></div><div class="impact"><strong>Fleet Deployment</strong><span>Supported new fleet planning, coordination, deployment readiness, and execution within biomedical technology workflows.</span></div><div class="impact"><strong>Operational Control</strong><span>Managed PMs, auditing, service coordination, documentation, compliance follow-up, and issue tracking.</span></div><div class="impact"><strong>Data Mindset</strong><span>Connected technical work with dashboards, structured records, exception tracking, and business operations reporting.</span></div></div></div></section>
 
-<section class="section reveal" id="projects"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">Portfolio Projects</div><h2>Featured work across biomedical operations, Health IT, and analytics.</h2></div><p class="lead">Use the filters below to explore projects by type. Real projects are grounded in experience. Portfolio demos are clearly marked.</p></div>
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="real">Real Experience</button>
-    <button class="filter-btn" data-filter="ops">Operations / Health IT</button>
-    <button class="filter-btn" data-filter="academic">Academic</button>
-    <button class="filter-btn" data-filter="demo">Portfolio Demo</button>
-  </div>
-  <div class="cards" id="projectGrid">
-    <article class="card featured project-card" data-category="real ops">
-      <h3>BD Alaris Device PM Load Balance & Inventory Reconciliation System</h3>
-      <p>Structured operational workflow for BD Alaris device PM balancing, audit tracking, duplicate asset detection, missing asset alerts, due-count reduction logic, and alignment between audit sheets and the main load balance inventory.</p>
-      <div class="project-meta">
-        <div class="mini-kpi"><strong>BD Alaris</strong><span>Corrected device line focus</span></div>
-        <div class="mini-kpi"><strong>XLOOKUP</strong><span>Audit-to-inventory linkage</span></div>
-        <div class="mini-kpi"><strong>COUNTIF(S)</strong><span>Missing / duplicate logic</span></div>
-        <div class="mini-kpi"><strong>Daily Ops</strong><span>Workflow maintenance</span></div>
-      </div>
-      <details open><summary>Case study details</summary><ul>
-        <li><b>Problem:</b> PM audits and inventory needed to stay aligned, but duplicates, missing records, and PM date updates created mismatches.</li>
-        <li><b>Solution:</b> built formula-driven tracking for duplicate detection, missing asset visibility, PM date lookups, and accurate monthly due-balance logic.</li>
-        <li><b>Impact:</b> improved audit readiness, reduced manual checking, and made PM operations easier to track in a daily workflow.</li>
-        <li><b>Tools:</b> Excel, XLOOKUP, COUNTIF, COUNTIFS, conditional formatting, structured operational logic.</li>
-      </ul></details>
-      <div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Operations / Health IT</span><span class="tag">Excel</span><span class="tag">Inventory Reconciliation</span><span class="tag">PM Workflow</span></div>
-    </article>
-    <article class="card project-card" data-category="real ops"><h3>Nuvolo Database Maintenance & Workflow Support</h3><p>Operational support for maintaining equipment data, workflow records, status visibility, and service-related information within Nuvolo.</p><details><summary>Case study details</summary><ul><li>Maintained structured device records and workflow-related data.</li><li>Supported operational visibility across maintenance and equipment management tasks.</li><li>Connects biomedical operations with Health IT systems and data governance.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Health IT</span><span class="tag">Nuvolo</span><span class="tag">Workflow Data</span></div></article>
-    <article class="card project-card" data-category="real ops"><h3>Vendor Coordination Across Multi-Manufacturer Biomedical Portfolio</h3><p>Coordinated service, follow-up, planning, and operational communication across vendors such as 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein, and others.</p><details><summary>Case study details</summary><ul><li>Worked across multiple manufacturers rather than a single product environment.</li><li>Supported coordination around service, documentation, planning, and execution.</li><li>Demonstrates vendor-management and operations coordination experience.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Vendor Coordination</span><span class="tag">Operations</span><span class="tag">Stakeholder Management</span></div></article>
-    <article class="card project-card" data-category="real ops"><h3>New Fleet Deployment Planning & Execution Support</h3><p>Supported planning and execution workflows for deploying new device fleets, including coordination, tracking, and operational readiness activities.</p><details><summary>Case study details</summary><ul><li>Focused on rollout planning, coordination, and execution support.</li><li>Bridges biomedical operations with project management and deployment readiness.</li><li>Strong relevance for project coordinator and operations analyst roles.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Deployment</span><span class="tag">Execution</span><span class="tag">Project Coordination</span></div></article>
-    <article class="card project-card" data-category="real ops"><h3>PM Auditing, Compliance & Exception Tracking</h3><p>Operational approach for monitoring PM status, follow-up issues, open gaps, and audit-related exceptions across biomedical equipment activities.</p><details><summary>Case study details</summary><ul><li>Focused on operational control of PMs, audits, and compliance checks.</li><li>Structured data for missing items, duplicates, overdue tasks, and notes.</li><li>Demonstrates quality/process support and operational governance skills.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">PM Auditing</span><span class="tag">Compliance</span><span class="tag">Quality Support</span></div></article>
-    <article class="card project-card" data-category="real"><h3>Biomedical Equipment Procurement & Vendor Analysis</h3><p>Hospital equipment planning and procurement support involving vendor comparison, cost review, equipment quality analysis, purchase planning, and department coordination.</p><details><summary>Case study details</summary><ul><li>Evaluated equipment options across vendors.</li><li>Supported planning, procurement requirements, and phased implementation.</li><li>Connects biomedical work with business operations and purchasing decisions.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag">Procurement</span><span class="tag">Vendor Analysis</span><span class="tag">Cost Review</span></div></article>
-    <article class="card project-card" data-category="demo ops"><h3>Healthcare Operations Dashboard for PM, Inventory & Vendor Status</h3><p>Portfolio dashboard concept unifying PM completion, inventory exceptions, open follow-ups, vendor coordination status, and model-wise summaries.</p><details><summary>Case study details</summary><ul><li>Transforms operational data into decision-ready dashboard views.</li><li>Combines biomedical operations with BI-style reporting.</li><li>Designed as a portfolio extension using sample data.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag ops">Dashboard</span><span class="tag">Power BI</span><span class="tag">KPI Reporting</span></div></article>
-    <article class="card project-card" data-category="demo ops"><h3>Health IT Service Workflow & Device Readiness Tracker</h3><p>Portfolio concept for tracking device readiness, tickets, service milestones, owner departments, location updates, and operational handoffs.</p><details><summary>Case study details</summary><ul><li>Shows structured workflow thinking for device readiness and service management.</li><li>Strong fit for Health IT operations, project coordination, and workflow analyst roles.</li><li>Can later be expanded using mock process maps or screenshots.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag ops">Health IT</span><span class="tag">Workflow Design</span><span class="tag">Operations</span></div></article>
-    <article class="card project-card" data-category="academic"><h3>IoT-Enabled DRIPS Monitoring System</h3><p>Biomedical engineering academic project focused on IV drip monitoring, sensor-based detection, and patient-care workflow support.</p><details><summary>Case study details</summary><ul><li>Demonstrates instrumentation, sensors, and engineering problem solving.</li><li>Connects clinical needs with practical device monitoring concepts.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">Biomedical Engineering</span><span class="tag">IoT</span><span class="tag">Sensors</span></div></article>
-    <article class="card project-card" data-category="academic"><h3>Medical Imaging & Lung Lesion Detection Workflow</h3><p>Biomedical imaging workflow involving CT/DICOM preprocessing concepts, segmentation, feature preparation, and lesion analysis logic.</p><details><summary>Case study details</summary><ul><li>Shows technical grounding in biomedical imaging workflows.</li><li>Useful for connecting biomedical engineering with analytics and AI positioning.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">Medical Imaging</span><span class="tag">DICOM</span><span class="tag">Segmentation</span></div></article>
-    <article class="card project-card" data-category="academic"><h3>Business Analytics Data Cleaning & Visualization Portfolio</h3><p>Coursework-driven collection of analytics projects involving data cleaning, transformation, visualization, and forecasting across different datasets.</p><details><summary>Case study details</summary><ul><li>Represents the business analytics side of the profile.</li><li>Supports applications to analyst roles beyond only biomedical engineering.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">R</span><span class="tag">Python</span><span class="tag">Data Cleaning</span></div></article>
-    <article class="card project-card" data-category="demo"><h3>AI-Driven Healthcare Supply Chain Optimization</h3><p>Analytics project applying forecasting, clustering, and machine learning concepts to healthcare supply planning and decision support.</p><details><summary>Case study details</summary><ul><li>Extends the profile into AI/data-driven healthcare operations thinking.</li><li>Best suited as a portfolio demonstration or research-style project.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag">Forecasting</span><span class="tag">ML Concepts</span><span class="tag">Supply Chain</span></div></article>
-  </div>
-  <div class="privacy">Public portfolio note: keep real hospital data confidential. Add only anonymized screenshots, sample dashboards, or mock records if you decide to expand this site later.</div>
-</div></section>
+<section class="section reveal" id="projects"><div class="container"><div class="section-head"><div><div class="eyebrow">Portfolio Projects</div><h2>Featured work across biomedical operations, Health IT, and analytics.</h2></div><p class="lead">Use the filters below to explore projects by type. Real projects are grounded in experience. Portfolio demos are clearly marked.</p></div><div class="filters"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="real">Real Experience</button><button class="filter-btn" data-filter="ops">Operations / Health IT</button><button class="filter-btn" data-filter="academic">Academic</button><button class="filter-btn" data-filter="demo">Portfolio Demo</button></div><div class="cards" id="projectGrid">
 
-<section class="section reveal" id="experience"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">Experience</div><h2>Interactive experience view</h2></div><p class="lead">Switch between the two main experience blocks to see the different sides of the profile.</p></div>
-  <div class="tabs">
-    <button class="tab-btn active" data-tab="nyu">NYU Langone Experience</button>
-    <button class="tab-btn" data-tab="medicover">Medicover Experience</button>
-  </div>
-  <div class="tab-panel active" id="tab-nyu">
-    <div class="experience-card">
-      <div class="exp-top"><div><div class="exp-title">Health IT & Biomedical Operations Project Coordinator</div><div class="exp-sub">NYU Langone Health • Biomedical Operations • Health IT • Project Coordination</div></div><div class="tags"><span class="tag real">Current / Recent</span><span class="tag ops">Health IT</span><span class="tag ops">Operations</span></div></div>
-      <div class="exp-grid">
-        <div class="exp-box"><h4>Core Operations</h4><ul><li>Supported biomedical operations workflows and service coordination.</li><li>Handled PM-related activities, auditing support, compliance follow-up, and operational documentation.</li><li>Worked across different manufacturers and device environments, not only BD Alaris.</li></ul></div>
-        <div class="exp-box"><h4>Health IT / Systems</h4><ul><li>Maintained and supported equipment-related workflow data in Nuvolo.</li><li>Tracked records, status visibility, and structured device information for operational use.</li><li>Connected system data with maintenance and workflow needs.</li></ul></div>
-        <div class="exp-box"><h4>Vendor & Fleet Coordination</h4><ul><li>Coordinated with vendors including 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein, and others.</li><li>Supported deployment planning and execution for new fleets.</li><li>Helped align operations, vendor activity, and workflow follow-up.</li></ul></div>
-        <div class="exp-box"><h4>Why This Matters</h4><ul><li>Strong fit for Health IT, operations, workflow analyst, biomedical coordinator, and project support roles.</li><li>Shows a mix of technical operations, systems thinking, and business process awareness.</li></ul></div>
-      </div>
-    </div>
-  </div>
-  <div class="tab-panel" id="tab-medicover">
-    <div class="experience-card">
-      <div class="exp-top"><div><div class="exp-title">Medical Equipment Analyst / Biomedical Engineering Specialist</div><div class="exp-sub">Medicover Hospitals • Procurement • Planning • Biomedical Engineering Operations</div></div><div class="tags"><span class="tag real">2021–2023</span><span class="tag">Procurement</span><span class="tag">Operations</span></div></div>
-      <div class="exp-grid">
-        <div class="exp-box"><h4>Planning & Procurement</h4><ul><li>Supported purchase requisitions and vendor coordination for medical equipment acquisition.</li><li>Participated in vendor comparison, quality review, and cost analysis.</li><li>Helped plan equipment implementation in a phased manner based on operational needs.</li></ul></div>
-        <div class="exp-box"><h4>Operations & Coordination</h4><ul><li>Coordinated with departments to understand equipment needs and readiness requirements.</li><li>Supported installation planning and equipment incorporation.</li><li>Worked across operational stakeholders to ensure smoother execution.</li></ul></div>
-        <div class="exp-box"><h4>Maintenance & Lifecycle</h4><ul><li>Worked with preventive maintenance coordination and equipment lifecycle tracking.</li><li>Supported documentation and follow-up around equipment status and usage.</li><li>Connected engineering understanding with day-to-day hospital operational needs.</li></ul></div>
-        <div class="exp-box"><h4>Why This Matters</h4><ul><li>Builds the strong operations and procurement backbone of the profile.</li><li>Shows hands-on biomedical engineering experience translated into business operations language.</li></ul></div>
-      </div>
-    </div>
-  </div>
-</div></section>
+<article class="card featured project-card" data-category="real ops"><h3>BD Alaris Device PM Load Balance & Inventory Reconciliation System</h3><p>Structured operational workflow for BD Alaris device PM balancing, audit tracking, duplicate asset detection, missing asset alerts, due-count reduction logic, and alignment between audit sheets and the main load balance inventory.</p><div class="project-meta"><div class="mini-kpi"><strong>BD Alaris</strong><span>Corrected device line focus</span></div><div class="mini-kpi"><strong>XLOOKUP</strong><span>Audit-to-inventory linkage</span></div><div class="mini-kpi"><strong>COUNTIF(S)</strong><span>Missing / duplicate logic</span></div><div class="mini-kpi"><strong>Daily Ops</strong><span>Workflow maintenance</span></div></div><details open><summary>Case study details</summary><ul><li><b>Problem:</b> PM audits and inventory needed to stay aligned, but duplicates, missing records, and PM date updates created mismatches.</li><li><b>Solution:</b> built formula-driven tracking for duplicate detection, missing asset visibility, PM date lookups, and accurate monthly due-balance logic.</li><li><b>Impact:</b> improved audit readiness, reduced manual checking, and made PM operations easier to track in a daily workflow.</li><li><b>Tools:</b> Excel, XLOOKUP, COUNTIF, COUNTIFS, conditional formatting, structured operational logic.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Operations / Health IT</span><span class="tag">Excel</span><span class="tag">Inventory Reconciliation</span><span class="tag">PM Workflow</span></div></article>
 
-<section class="section reveal" id="skills"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">Skills</div><h2>Skill map across healthcare, operations, and analytics.</h2></div><p class="lead">This section is intentionally broad so recruiters can map the profile to technical, operations, project, and analyst roles.</p></div>
-  <div class="skill-grid">
-    <div class="skill-card"><h3>Healthcare Operations</h3><div class="skill-list"><span class="pill">Preventive Maintenance</span><span class="pill">Auditing</span><span class="pill">Compliance Tracking</span><span class="pill">Device Lifecycle</span><span class="pill">Service Coordination</span></div></div>
-    <div class="skill-card"><h3>Health IT & Systems</h3><div class="skill-list"><span class="pill">Nuvolo</span><span class="pill">Workflow Tracking</span><span class="pill">Database Maintenance</span><span class="pill">Status Visibility</span><span class="pill">Operational Records</span></div></div>
-    <div class="skill-card"><h3>Analytics & Reporting</h3><div class="skill-list"><span class="pill">Advanced Excel</span><span class="pill">XLOOKUP</span><span class="pill">COUNTIF / COUNTIFS</span><span class="pill">Power BI</span><span class="pill">Dashboards</span><span class="pill">KPI Reporting</span></div></div>
-    <div class="skill-card"><h3>Business & Coordination</h3><div class="skill-list"><span class="pill">Vendor Coordination</span><span class="pill">Fleet Deployment</span><span class="pill">Planning & Execution</span><span class="pill">Procurement</span><span class="pill">Stakeholder Coordination</span></div></div>
-  </div>
-</div></section>
+<article class="card project-card" data-category="real ops"><h3>BD Alaris Fleet Deployment & Operational Readiness</h3><p>Support for large-scale BD Alaris fleet deployment planning, readiness tracking, PM coordination, device data alignment, and operational handoffs.</p><details><summary>Case study details</summary><ul><li>Supported planning and coordination for new fleet deployment activities.</li><li>Tracked readiness, audit records, PM status, and operational follow-up.</li><li>Connected device implementation with documentation, systems, and daily operations.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Fleet Deployment</span><span class="tag">BD Alaris</span><span class="tag">Project Coordination</span></div></article>
 
-<section class="section reveal" id="roles"><div class="container">
-  <div class="section-head"><div><div class="eyebrow">Target Roles</div><h2>Roles this portfolio can support</h2></div><p class="lead">Built to position the same experience across healthcare, business operations, IT-supportive, and analyst pathways.</p></div>
-  <div class="roles">
-    <div class="role">Health IT Project Coordinator</div><div class="role">Biomedical Operations Coordinator</div><div class="role">Healthcare Operations Analyst</div><div class="role">Business Analyst</div><div class="role">Clinical Engineering Coordinator</div><div class="role">Medical Device Workflow Analyst</div><div class="role">Project Support / PMO-style Role</div><div class="role">Healthcare Data / BI Analyst</div>
-  </div>
-</div></section>
+<article class="card project-card" data-category="real ops"><h3>Nuvolo Database Maintenance & Workflow Support</h3><p>Operational support for maintaining equipment data, workflow records, status visibility, and service-related information within Nuvolo.</p><details><summary>Case study details</summary><ul><li>Maintained structured device records and workflow-related data.</li><li>Supported operational visibility across maintenance and equipment management tasks.</li><li>Connects biomedical operations with Health IT systems and data governance.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Health IT</span><span class="tag">Nuvolo</span><span class="tag">Workflow Data</span></div></article>
 
-<section class="section reveal" id="contact"><div class="container">
-  <div class="contact-panel">
-    <div><div class="eyebrow">Contact</div><h2>Let’s connect.</h2><p class="lead">Open to Health IT, healthcare analytics, biomedical operations, business operations, project coordination, and data-oriented roles.</p></div>
-    <div class="contact-list">
-      <a class="contact-link" href="mailto:sabasarmads@gmail.com">Email: sabasarmads@gmail.com</a>
-      <a class="contact-link" href="https://www.linkedin.com/in/sabahuddin-shams-677192194/">LinkedIn: Sabahuddin Shams</a>
-      <a class="contact-link" href="https://github.com/Sabahuddinshams07">GitHub: github.com/Sabahuddinshams07</a>
-      <a class="contact-link" href="https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio">Portfolio: https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio</a>
-    </div>
-  </div>
-</div></section>
+<article class="card project-card" data-category="real ops"><h3>Vendor Coordination Across Multi-Manufacturer Biomedical Portfolio</h3><p>Coordinated service, follow-up, planning, and operational communication across vendors such as 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein, and others.</p><details><summary>Case study details</summary><ul><li>Worked across multiple manufacturers rather than a single product environment.</li><li>Supported coordination around service, documentation, planning, and execution.</li><li>Demonstrates vendor-management and operations coordination experience.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">Vendor Coordination</span><span class="tag">Operations</span><span class="tag">Stakeholder Management</span></div></article>
+
+<article class="card project-card" data-category="real ops"><h3>PM Auditing, Compliance & Exception Tracking</h3><p>Operational approach for monitoring PM status, follow-up issues, open gaps, duplicates, missing inventory, and audit-related exceptions across biomedical equipment activities.</p><details><summary>Case study details</summary><ul><li>Focused on operational control of PMs, audits, compliance checks, and service exceptions.</li><li>Structured data for missing items, duplicates, overdue tasks, and follow-up notes.</li><li>Demonstrates quality/process support and operational governance skills.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag ops">PM Auditing</span><span class="tag">Compliance</span><span class="tag">Quality Support</span></div></article>
+
+<article class="card project-card" data-category="real"><h3>Biomedical Equipment Procurement & Vendor Analysis</h3><p>Hospital equipment planning and procurement support involving vendor comparison, cost review, equipment quality analysis, purchase planning, and department coordination.</p><details><summary>Case study details</summary><ul><li>Evaluated equipment options across vendors.</li><li>Supported planning, procurement requirements, and phased implementation.</li><li>Connects biomedical work with business operations and purchasing decisions.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag">Procurement</span><span class="tag">Vendor Analysis</span><span class="tag">Cost Review</span></div></article>
+
+<article class="card project-card" data-category="real ops"><h3>Medical Equipment Performance Qualification & Reliability Improvement</h3><p>Biomedical operations project focused on equipment qualification, performance documentation, troubleshooting follow-up, and reliability improvement workflows.</p><details><summary>Case study details</summary><ul><li>Links biomedical operations with quality, process control, and documentation.</li><li>Supports positioning for validation, quality, and clinical engineering roles.</li><li>Uses structured tracking and follow-up logic.</li></ul></details><div class="tags"><span class="tag real">Real Experience</span><span class="tag">IQ/OQ/PQ</span><span class="tag">Reliability</span><span class="tag">Quality</span></div></article>
+
+<article class="card project-card" data-category="demo ops"><h3>Healthcare Operations Dashboard for PM, Inventory & Vendor Status</h3><p>Portfolio dashboard concept unifying PM completion, inventory exceptions, open follow-ups, vendor coordination status, model-wise summaries, and technician productivity.</p><details><summary>Case study details</summary><ul><li>Transforms operational data into decision-ready dashboard views.</li><li>Combines biomedical operations with BI-style reporting.</li><li>Designed as a portfolio extension using sample data.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag ops">Dashboard</span><span class="tag">Power BI</span><span class="tag">KPI Reporting</span></div></article>
+
+<article class="card project-card" data-category="demo ops"><h3>Health IT Service Workflow & Device Readiness Tracker</h3><p>Portfolio concept for tracking device readiness, tickets, service milestones, owner departments, location updates, and operational handoffs.</p><details><summary>Case study details</summary><ul><li>Shows structured workflow thinking for device readiness and service management.</li><li>Strong fit for Health IT operations, project coordination, and workflow analyst roles.</li><li>Can be expanded using mock process maps or screenshots.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag ops">Health IT</span><span class="tag">Workflow Design</span><span class="tag">Operations</span></div></article>
+
+<article class="card project-card" data-category="academic"><h3>IoT-Enabled DRIPS Monitoring System</h3><p>Biomedical engineering academic project focused on IV drip monitoring, sensor-based detection, and patient-care workflow support.</p><details><summary>Case study details</summary><ul><li>Demonstrates instrumentation, sensors, and engineering problem solving.</li><li>Connects clinical needs with practical device monitoring concepts.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">Biomedical Engineering</span><span class="tag">IoT</span><span class="tag">Sensors</span></div></article>
+
+<article class="card project-card" data-category="academic"><h3>Medical Imaging & Lung Lesion Detection Workflow</h3><p>Biomedical imaging workflow involving CT/DICOM preprocessing concepts, segmentation, feature preparation, and lesion analysis logic.</p><details><summary>Case study details</summary><ul><li>Shows technical grounding in biomedical imaging workflows.</li><li>Useful for connecting biomedical engineering with analytics and AI positioning.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">Medical Imaging</span><span class="tag">DICOM</span><span class="tag">Segmentation</span></div></article>
+
+<article class="card project-card" data-category="academic"><h3>Business Analytics Data Cleaning & Visualization Portfolio</h3><p>Coursework-driven collection of analytics projects involving data cleaning, transformation, visualization, forecasting, survey analysis, and operational datasets.</p><details><summary>Case study details</summary><ul><li>Represents the business analytics side of the profile.</li><li>Supports applications to analyst roles beyond only biomedical engineering.</li><li>Can include R, Python, Power BI, Excel, forecasting, and dashboarding examples.</li></ul></details><div class="tags"><span class="tag academic">Academic</span><span class="tag">R</span><span class="tag">Python</span><span class="tag">Data Cleaning</span><span class="tag">Power BI</span></div></article>
+
+<article class="card project-card" data-category="demo"><h3>AI-Driven Healthcare Supply Chain Optimization</h3><p>Analytics project applying forecasting, clustering, predictive modeling, MCDM, and machine learning concepts to healthcare supply planning and decision support.</p><details><summary>Case study details</summary><ul><li>Extends the profile into AI/data-driven healthcare operations thinking.</li><li>Connects business analytics with healthcare logistics and supply chain decision support.</li><li>Best suited as a portfolio demonstration or research-style project.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag">Forecasting</span><span class="tag">ML Concepts</span><span class="tag">Supply Chain</span><span class="tag">MCDM</span></div></article>
+
+<article class="card project-card" data-category="demo ops"><h3>Smart Infusion Pump Post-Market Evaluation</h3><p>Research-style project concept focused on real-world device logs, interoperable smart pumps, post-market surveillance, safety monitoring, and predictive analytics.</p><details><summary>Case study details</summary><ul><li>Connects BD Alaris work with broader digital health and medical device evaluation.</li><li>Strong fit for Health IT, medical device analytics, and regulatory/quality interest areas.</li><li>Can later be expanded into a research case study with anonymized or simulated data.</li></ul></details><div class="tags"><span class="tag demo">Portfolio Demo</span><span class="tag ops">Digital Health</span><span class="tag">Smart Pumps</span><span class="tag">Post-Market</span></div></article>
+
+</div><div class="privacy">Public portfolio note: keep real hospital data confidential. Add only anonymized screenshots, sample dashboards, or mock records if you decide to expand this site later.</div></div></section>
+
+<section class="section reveal" id="experience"><div class="container"><div class="section-head"><div><div class="eyebrow">Experience</div><h2>Interactive experience view</h2></div><p class="lead">Switch between the two main experience blocks to see the different sides of the profile.</p></div><div class="tabs"><button class="tab-btn active" data-tab="nyu">NYU Langone Experience</button><button class="tab-btn" data-tab="medicover">Medicover Experience</button></div><div class="tab-panel active" id="tab-nyu"><div class="experience-card"><div class="exp-top"><div><div class="exp-title">Health IT & Biomedical Operations Project Coordinator</div><div class="exp-sub">NYU Langone Health • Biomedical Operations • Health IT • Project Coordination</div></div><div class="tags"><span class="tag real">Current / Recent</span><span class="tag ops">Health IT</span><span class="tag ops">Operations</span></div></div><div class="exp-grid"><div class="exp-box"><h4>Core Operations</h4><ul><li>Supported biomedical operations workflows and service coordination.</li><li>Handled PM-related activities, auditing support, compliance follow-up, and operational documentation.</li><li>Worked across different manufacturers and device environments, not only BD Alaris.</li></ul></div><div class="exp-box"><h4>Health IT / Systems</h4><ul><li>Maintained and supported equipment-related workflow data in Nuvolo.</li><li>Tracked records, status visibility, and structured device information for operational use.</li><li>Connected system data with maintenance and workflow needs.</li></ul></div><div class="exp-box"><h4>Vendor & Fleet Coordination</h4><ul><li>Coordinated with vendors including 3M, Philips Healthcare, Zimmer, Welch Allyn, BD, AcuVein, and others.</li><li>Supported deployment planning and execution for new fleets.</li><li>Helped align operations, vendor activity, and workflow follow-up.</li></ul></div><div class="exp-box"><h4>Data, PM & Audit Work</h4><ul><li>Built and maintained spreadsheet-driven workflows for PM tracking, load balancing, duplicate detection, and missing inventory alerts.</li><li>Used operational data to support daily decision-making, follow-up, and audit visibility.</li></ul></div></div></div></div><div class="tab-panel" id="tab-medicover"><div class="experience-card"><div class="exp-top"><div><div class="exp-title">Medical Equipment Analyst / Biomedical Engineering Specialist</div><div class="exp-sub">Medicover Hospitals • Procurement • Planning • Biomedical Engineering Operations</div></div><div class="tags"><span class="tag real">2021–2023</span><span class="tag">Procurement</span><span class="tag">Operations</span></div></div><div class="exp-grid"><div class="exp-box"><h4>Planning & Procurement</h4><ul><li>Supported purchase requisitions and vendor coordination for medical equipment acquisition.</li><li>Participated in vendor comparison, quality review, and cost analysis.</li><li>Helped plan equipment implementation in a phased manner based on operational needs.</li></ul></div><div class="exp-box"><h4>Operations & Coordination</h4><ul><li>Coordinated with departments to understand equipment needs and readiness requirements.</li><li>Supported installation planning and equipment incorporation.</li><li>Worked across operational stakeholders to ensure smoother execution.</li></ul></div><div class="exp-box"><h4>Maintenance & Lifecycle</h4><ul><li>Worked with preventive maintenance coordination and equipment lifecycle tracking.</li><li>Supported documentation and follow-up around equipment status and usage.</li><li>Connected engineering understanding with day-to-day hospital operational needs.</li></ul></div><div class="exp-box"><h4>Business Operations Value</h4><ul><li>Built the procurement, planning, and operations foundation of the profile.</li><li>Shows hands-on biomedical engineering experience translated into business operations language.</li></ul></div></div></div></div></div></section>
+
+<section class="section reveal" id="skills"><div class="container"><div class="section-head"><div><div class="eyebrow">Skills</div><h2>Expanded skill map across healthcare, operations, IT systems, and analytics.</h2></div><p class="lead">This is intentionally broad so recruiters can map the profile to Health IT, data, operations, project, quality, and biomedical roles.</p></div><div class="skill-grid"><div class="skill-card"><h3>Healthcare Operations</h3><div class="skill-list"><span class="pill">Preventive Maintenance</span><span class="pill">PM Auditing</span><span class="pill">Compliance Tracking</span><span class="pill">Device Lifecycle</span><span class="pill">Service Coordination</span><span class="pill">Fleet Deployment</span><span class="pill">Work Orders</span><span class="pill">Operational Readiness</span></div></div><div class="skill-card"><h3>Health IT & Systems</h3><div class="skill-list"><span class="pill">Nuvolo</span><span class="pill">CMMS</span><span class="pill">ERP / Asset Workflows</span><span class="pill">Workflow Tracking</span><span class="pill">Database Maintenance</span><span class="pill">Status Visibility</span><span class="pill">Operational Records</span></div></div><div class="skill-card"><h3>Analytics & Reporting</h3><div class="skill-list"><span class="pill">Advanced Excel</span><span class="pill">XLOOKUP</span><span class="pill">COUNTIF / COUNTIFS</span><span class="pill">Power BI</span><span class="pill">SQL</span><span class="pill">Python</span><span class="pill">R</span><span class="pill">Dashboards</span><span class="pill">KPI Reporting</span><span class="pill">Forecasting</span></div></div><div class="skill-card"><h3>Quality, Business & Biomedical</h3><div class="skill-list"><span class="pill">Vendor Coordination</span><span class="pill">Procurement</span><span class="pill">Planning & Execution</span><span class="pill">Stakeholder Coordination</span><span class="pill">Root Cause Analysis</span><span class="pill">SOPs</span><span class="pill">IQ/OQ/PQ</span><span class="pill">GMP</span><span class="pill">ISO 13485 Awareness</span></div></div></div></div></section>
+
+<section class="section reveal" id="certifications"><div class="container"><div class="section-head"><div><div class="eyebrow">Certifications & Learning</div><h2>Certifications, workshops, and professional development.</h2></div><p class="lead">Added based on your previous certification/profile details. More can be added later exactly as shown on LinkedIn.</p></div><div class="cert-grid"><div class="cert-card"><h3>Microsoft Excel Expert</h3><p>Microsoft Office Specialist-style Excel credential / advanced Excel capability.</p><div class="tags"><span class="tag cert">Excel</span><span class="tag cert">Analytics</span></div></div><div class="cert-card"><h3>Data Modeling for Power BI</h3><p>Power BI data modeling and dashboard development learning.</p><div class="tags"><span class="tag cert">Power BI</span><span class="tag cert">Data Modeling</span></div></div><div class="cert-card"><h3>Power BI Beginner to Pro Workshop</h3><p>Business intelligence dashboarding and reporting skill development.</p><div class="tags"><span class="tag cert">BI</span><span class="tag cert">Dashboards</span></div></div><div class="cert-card"><h3>Introduction to R Programming</h3><p>Analytics coursework / certification focused on R-based data analysis.</p><div class="tags"><span class="tag cert">R</span><span class="tag cert">Data Analysis</span></div></div><div class="cert-card"><h3>NPTEL Roadmap for Patent Creation</h3><p>Elite certification, IIT Kharagpur, Jan–Mar 2021, 65%.</p><div class="tags"><span class="tag cert">Innovation</span><span class="tag cert">IP</span></div></div><div class="cert-card"><h3>8th International Patient Safety Conference</h3><p>Professional development exposure in patient safety and healthcare quality.</p><div class="tags"><span class="tag cert">Patient Safety</span><span class="tag cert">Healthcare</span></div></div><div class="cert-card"><h3>BIODHRUVA’19 National Level Symposium</h3><p>Biomedical engineering symposium participation and technical development.</p><div class="tags"><span class="tag cert">Biomedical</span><span class="tag cert">Symposium</span></div></div><div class="cert-card"><h3>AICASETM’19 International Conference</h3><p>Conference participation supporting academic and technical exposure.</p><div class="tags"><span class="tag cert">Conference</span><span class="tag cert">Technical</span></div></div></div></div></section>
+
+<section class="section reveal" id="roles"><div class="container"><div class="section-head"><div><div class="eyebrow">Target Roles</div><h2>Roles this portfolio can support</h2></div><p class="lead">Built to position the same experience across healthcare, business operations, IT-supportive, and analyst pathways.</p></div><div class="roles"><div class="role">Health IT Project Coordinator</div><div class="role">Biomedical Operations Coordinator</div><div class="role">Healthcare Operations Analyst</div><div class="role">Business Analyst</div><div class="role">Clinical Engineering Coordinator</div><div class="role">Medical Device Workflow Analyst</div><div class="role">Project Support / PMO-style Role</div><div class="role">Healthcare Data / BI Analyst</div><div class="role">Quality / Process Support</div><div class="role">Medical Device Operations Analyst</div><div class="role">Healthcare Supply Chain Analyst</div><div class="role">Validation / Documentation Support</div></div></div></section>
+
+<section class="section reveal" id="contact"><div class="container"><div class="contact-panel"><div><div class="eyebrow">Contact</div><h2>Let’s connect.</h2><p class="lead">Open to Health IT, healthcare analytics, biomedical operations, business operations, project coordination, quality/process support, and data-oriented roles.</p></div><div class="contact-list"><a class="contact-link" href="mailto:sabasarmads@gmail.com">Email: sabasarmads@gmail.com</a><a class="contact-link" href="https://www.linkedin.com/in/sabahuddin-shams-677192194/">LinkedIn: Sabahuddin Shams</a><a class="contact-link" href="https://github.com/Sabahuddinshams07">GitHub: github.com/Sabahuddinshams07</a><a class="contact-link" href="https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio">Portfolio: https://sabahuddinshams07.github.io/sabahuddin-shams-portfolio</a></div></div></div></section>
 </main>
-
 <footer><div class="container">© 2026 Sabahuddin Shams • Health IT, Biomedical Operations & Data Analytics Portfolio</div></footer>
-
 <script>
-const reveals=document.querySelectorAll(".reveal");
-const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting) entry.target.classList.add("active");});},{threshold:.12});
-reveals.forEach((el)=>observer.observe(el));
-
-const filterBtns=document.querySelectorAll(".filter-btn");
-const projectCards=document.querySelectorAll(".project-card");
-filterBtns.forEach((btn)=>{
-  btn.addEventListener("click",()=>{
-    filterBtns.forEach((b)=>b.classList.remove("active"));
-    btn.classList.add("active");
-    const filter=btn.dataset.filter;
-    projectCards.forEach((card)=>{
-      if(filter==="all"){card.style.display="";}
-      else{
-        const cat=card.dataset.category || "";
-        card.style.display = cat.includes(filter) ? "" : "none";
-      }
-    });
-  });
-});
-
-const tabBtns=document.querySelectorAll(".tab-btn");
-const tabPanels=document.querySelectorAll(".tab-panel");
-tabBtns.forEach((btn)=>{
-  btn.addEventListener("click",()=>{
-    const tab=btn.dataset.tab;
-    tabBtns.forEach((b)=>b.classList.remove("active"));
-    tabPanels.forEach((p)=>p.classList.remove("active"));
-    btn.classList.add("active");
-    document.getElementById("tab-"+tab).classList.add("active");
-  });
-});
+const reveals=document.querySelectorAll(".reveal");const observer=new IntersectionObserver((entries)=>{entries.forEach((entry)=>{if(entry.isIntersecting)entry.target.classList.add("active");});},{threshold:.12});reveals.forEach((el)=>observer.observe(el));
+const filterBtns=document.querySelectorAll(".filter-btn");const projectCards=document.querySelectorAll(".project-card");filterBtns.forEach((btn)=>{btn.addEventListener("click",()=>{filterBtns.forEach((b)=>b.classList.remove("active"));btn.classList.add("active");const filter=btn.dataset.filter;projectCards.forEach((card)=>{if(filter==="all"){card.style.display="";}else{const cat=card.dataset.category||"";card.style.display=cat.includes(filter)?"":"none";}});});});
+const tabBtns=document.querySelectorAll(".tab-btn");const tabPanels=document.querySelectorAll(".tab-panel");tabBtns.forEach((btn)=>{btn.addEventListener("click",()=>{const tab=btn.dataset.tab;tabBtns.forEach((b)=>b.classList.remove("active"));tabPanels.forEach((p)=>p.classList.remove("active"));btn.classList.add("active");document.getElementById("tab-"+tab).classList.add("active");});});
 </script>
 </body>
 </html>
